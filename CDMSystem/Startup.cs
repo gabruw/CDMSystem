@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,7 +17,10 @@ namespace CDMSystem
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var Builder = new ConfigurationBuilder();
+            Builder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+
+            Configuration = Builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -31,6 +35,8 @@ namespace CDMSystem
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            var connectionString = Configuration.GetConnectionString("MysqlConnection");
+            services.AddDbContext<>(option => option.UseMySql(connectionString, m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snyp_\\source\\repos\\CDMSystem\\CDMSystem\\CDMSystem.csproj": {}
+    "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snyp_\\source\\repos\\CDMSystem\\CDMSystem\\CDMSystem.csproj": {
+    "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snyp_\\source\\repos\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
+        "projectUniqueName": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
         "projectName": "CDMSystem",
-        "projectPath": "C:\\Users\\snyp_\\source\\repos\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
+        "projectPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
         "packagesPath": "C:\\Users\\snyp_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snyp_\\source\\repos\\CDMSystem\\CDMSystem\\obj\\",
+        "outputPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [
