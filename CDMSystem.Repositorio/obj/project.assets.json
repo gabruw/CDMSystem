@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "CDMSystem.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/CDMSystem.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CDMSystem.Dominio.dll": {}
+        }
       }
     }
   },
@@ -680,10 +690,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "CDMSystem.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../CDMSystem.Dominio/CDMSystem.Dominio.csproj",
+      "msbuildProject": "../CDMSystem.Dominio/CDMSystem.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "CDMSystem.Dominio >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -719,7 +735,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem.Dominio\\CDMSystem.Dominio.csproj": {
+              "projectPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem.Dominio\\CDMSystem.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
