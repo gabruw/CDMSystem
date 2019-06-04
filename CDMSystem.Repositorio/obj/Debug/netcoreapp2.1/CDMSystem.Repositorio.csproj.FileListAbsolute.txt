@@ -1,0 +1,5 @@
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.1\CDMSystem.Dominio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.1\CDMSystem.Repositorio.csprojAssemblyReference.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.1\CDMSystem.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.1\CDMSystem.Repositorio.AssemblyInfoInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.1\CDMSystem.Repositorio.AssemblyInfo.cs

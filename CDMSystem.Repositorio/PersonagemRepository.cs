@@ -7,10 +7,7 @@ namespace CDMSystem.Dominio.Repository
     {
         public PersonagemRepository()
         {
-            var newPersonagem = new Personagem();
-
-            var personagemRepository = new PersonagemRepository();
-            personagemRepository.Incluid(newPersonagem);
+            
         }
     }
 }
