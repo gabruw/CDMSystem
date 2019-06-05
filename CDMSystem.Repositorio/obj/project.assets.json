@@ -1152,6 +1152,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "CDMSystem.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/CDMSystem.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CDMSystem.Dominio.dll": {}
+        }
       }
     }
   },
@@ -4456,10 +4466,16 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "CDMSystem.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../CDMSystem.Dominio/CDMSystem.Dominio.csproj",
+      "msbuildProject": "../CDMSystem.Dominio/CDMSystem.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "CDMSystem.Dominio >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Proxies >= 2.2.4",
       "Microsoft.NETCore.App >= 2.1.0",
       "Pomelo.EntityFrameworkCore.MySql >= 2.2.0"
@@ -4497,7 +4513,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem.Dominio\\CDMSystem.Dominio.csproj": {
+              "projectPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem.Dominio\\CDMSystem.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

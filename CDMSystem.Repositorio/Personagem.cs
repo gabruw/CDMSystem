@@ -9,7 +9,7 @@ namespace CDMSystem.Repositorio
     {
         public Personagem()
         {
-            var newPersonagem = new Personagem();
+            var newPersonagem = new Dominio.Entidades.Personagem();
 
             var personagemRepository = new PersonagemRepository();
             personagemRepository.Incluid(newPersonagem);

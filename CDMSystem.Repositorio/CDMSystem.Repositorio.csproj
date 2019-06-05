@@ -13,4 +13,8 @@
     <Folder Include="Config\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CDMSystem.Dominio\CDMSystem.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
