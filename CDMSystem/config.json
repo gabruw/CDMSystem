@@ -1,10 +1,5 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+  "ConnectionStrings": {
+    "MySqlConnection": "Server=127.0.0.1;Database=db_cdmsystem;Uid=root;Pwd=12345;"
+  }
 }
