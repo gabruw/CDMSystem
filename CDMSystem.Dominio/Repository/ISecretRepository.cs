@@ -1,5 +1,5 @@
 ﻿using CDMSystem.Dominio.Contratos;
-using CDMSystem.Dominio.Entidades;
+using CDMSystem.Dominio.DTO;
 
 namespace CDMSystem.Dominio.Repository
 {

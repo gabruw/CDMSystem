@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CDMSystem.Dominio.Entidades
+namespace CDMSystem.Dominio.DTO
 {
     public class Secret : DTODefault
     {

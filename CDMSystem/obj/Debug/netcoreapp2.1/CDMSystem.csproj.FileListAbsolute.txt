@@ -59,3 +59,11 @@ C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMS
 C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.dll
 C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.pdb
 C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.csproj.CopyComplete
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.csprojAssemblyReference.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.csproj.CoreCompileInputs.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.RazorAssemblyInfo.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.RazorAssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.AssemblyInfoInputs.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.AssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.dll
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.1\CDMSystem.pdb

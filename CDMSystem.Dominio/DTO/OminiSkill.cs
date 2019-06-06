@@ -1,4 +1,4 @@
-﻿namespace CDMSystem.Dominio.Entidades
+﻿namespace CDMSystem.Dominio.DTO
 {
     public class OminiSkill : DTODefault
     {
