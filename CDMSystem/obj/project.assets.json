@@ -12298,34 +12298,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\snyp_\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\SHU Aeronáutica 01\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
+      "projectUniqueName": "C:\\Users\\SHU Aeronáutica 01\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
       "projectName": "CDMSystem",
-      "projectPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
-      "packagesPath": "C:\\Users\\snyp_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\snyp_\\Documents\\GitHub\\CDMSystem\\CDMSystem\\obj\\",
+      "projectPath": "C:\\Users\\SHU Aeronáutica 01\\Documents\\GitHub\\CDMSystem\\CDMSystem\\CDMSystem.csproj",
+      "packagesPath": "C:\\Users\\SHU Aeronáutica 01\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SHU Aeronáutica 01\\Documents\\GitHub\\CDMSystem\\CDMSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\snyp_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\SHU Aeronáutica 01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
@@ -12353,6 +12351,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
