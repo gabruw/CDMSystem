@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CDMSystem.Repositorio.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,7 +37,7 @@ namespace CDMSystem
             });
 
             var connectionString = Configuration.GetConnectionString("MysqlConnection");
-            services.AddDbContext<>(option => option.UseMySql(connectionString, m => m.MigrationsAssembly("CDMSystem.Repositorio")));
+            services.AddDbContext<CDMSystemContext>(option => option.UseMySql(connectionString, m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

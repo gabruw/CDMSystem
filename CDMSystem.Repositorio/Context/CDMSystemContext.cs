@@ -1,9 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JetBrains.Annotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace CDMSystem.Repositorio.Context
 {
     public class CDMSystemContext : DbContext
     {
+        public CDMSystemContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         public DbSet<Personagem> Personagems { get; set; }
 
         public DbSet<Classe> Classe { get; set; }
