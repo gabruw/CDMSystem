@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "MySqlConnection": "Server=127.0.0.1;Database=db_cdmsystem;Uid=root;Pwd=12345;"
+    "MySqlConnection": "Server=localhost;Database=db_cdmsystem;Uid=root;Pwd=;"
   }
 }
