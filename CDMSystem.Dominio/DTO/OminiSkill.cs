@@ -1,4 +1,6 @@
-﻿namespace CDMSystem.Dominio.DTO
+﻿using System.Collections.Generic;
+
+namespace CDMSystem.Dominio.DTO
 {
     public class OminiSkill : DTODefault
     {
@@ -21,6 +23,8 @@
         public int LevelOminiSkill { get; set; }
 
         public string UsoOminiSkill { get; set; }
+
+        public ICollection<string> PreRequisitoOminiSkill { get; set; }
 
         public override void Validate()
         {

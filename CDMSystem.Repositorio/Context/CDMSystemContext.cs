@@ -20,6 +20,8 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
             modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
+            modelBuilder.ApplyConfiguration(new CoreConfiguration());
+            modelBuilder.ApplyConfiguration(new CubreConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -37,5 +39,9 @@ namespace CDMSystem.Repositorio.Context
         public DbSet<ActiveSkill> ActiveSkill { get; set; }
 
         public DbSet<OminiSkill> OminiSkill { get; set; }  
+
+        public DbSet<Core> Core { get; set; }  
+
+        public DbSet<Cube> Cube { get; set; }  
     }
 }

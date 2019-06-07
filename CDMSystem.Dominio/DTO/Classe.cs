@@ -11,6 +11,8 @@ namespace CDMSystem.Dominio.DTO
 
         public ICollection<OminiSkill> OminiSkillClasse { get; set; }
 
+        public string NomeClasse { get; set; }
+
         public string StatusClasse { get; set; }
 
         public string ArmaduraClasse { get; set; }
@@ -31,6 +33,8 @@ namespace CDMSystem.Dominio.DTO
 
         public int DmgmClasse { get; set; }
 
+        public int DefClasse { get; set; }
+
         public int FurClasse { get; set; }
 
         public int DetClasse { get; set; }
@@ -39,13 +43,13 @@ namespace CDMSystem.Dominio.DTO
 
         public int AcrClasse { get; set; }
 
-        public string LaminasClasse { get; set; }
+        public string PericiaLaminasClasse { get; set; }
 
-        public string LongaDistanciaClasse { get; set; }
+        public string PericiaLongaDistanciaClasse { get; set; }
 
-        public string ArremecoClasse { get; set; }
+        public string PericiaArremecoClasse { get; set; }
 
-        public string CorpoCorpoClasse { get; set; }
+        public string PericiaCorpoCorpoClasse { get; set; }
 
         public override void Validate()
         {

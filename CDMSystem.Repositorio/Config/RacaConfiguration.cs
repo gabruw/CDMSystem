@@ -6,11 +6,15 @@ using System.Text;
 
 namespace CDMSystem.Repositorio.Config
 {
-    public class RacaConfiguration : IEntityTypeConfiguration<Raca>
+    public class RacaConfiguration : IEntityTypeConfiguration<Dominio.DTO.Raca>
     {
-        public void Configure(EntityTypeBuilder<Raca> builder)
+        public void Configure(EntityTypeBuilder<Dominio.DTO.Raca> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(r => r.IdRaca);
+
+            builder.Property(r => r.NomeRaca).IsRequired().HasMaxLength(40).HasColumnType("varchar");
+            builder.Property(r => r.BonusRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar");
+            builder.Property(r => r.RaceSkillRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar");
         }
     }
 }
