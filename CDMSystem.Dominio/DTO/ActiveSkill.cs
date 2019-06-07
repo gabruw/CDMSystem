@@ -10,7 +10,17 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeActiveSkill))
+            {
+                AddError("O campo Nome da Active Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(DescricaoActiveSkill))
+            {
+                AddError("O campo Descrição da Active Skill não foi informado.");
+            }
         }
     }
 }

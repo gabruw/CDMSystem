@@ -37,7 +37,9 @@ namespace CDMSystem
             });
 
             var connectionString = Configuration.GetConnectionString("CDMSystemDB");
-            services.AddDbContext<CDMSystemContext>(option => option.UseMySql(connectionString, m => m.MigrationsAssembly("CDMSystem.Repositorio")));
+            services.AddDbContext<CDMSystemContext>(option => 
+                                                            option.UseLazyLoadingProxies().UseMySql(connectionString, 
+                                                                m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -12,7 +12,22 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeRaca))
+            {
+                AddError("O campo Nome da Raça não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(BonusRaca))
+            {
+                AddError("O campo Bônus da Raça não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(RaceSkillRaca))
+            {
+                AddError("O campo Race Skill da Raça não foi informado.");
+            }
         }
     }
 }

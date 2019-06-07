@@ -12,7 +12,17 @@ namespace CDMSystem.Dominio.DTO
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeGuild))
+            {
+                AddError("O campo Nome da Guild não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(DescricaoGuild))
+            {
+                AddError("O campo Descrição da Guild não foi informado.");
+            }
         }
     }
 }

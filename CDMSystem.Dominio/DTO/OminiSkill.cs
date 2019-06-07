@@ -24,11 +24,51 @@ namespace CDMSystem.Dominio.DTO
 
         public string UsoOminiSkill { get; set; }
 
-        public ICollection<string> PreRequisitoOminiSkill { get; set; }
+        public virtual ICollection<string> PreRequisitoOminiSkill { get; set; }
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeOminiSkill))
+            {
+                AddError("O campo Nome da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(TipoOminiSkill))
+            {
+                AddError("O campo Tipo da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(DescricaoOminiSkill))
+            {
+                AddError("O campo Descrição da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(EfeitoOminiSkill))
+            {
+                AddError("O campo Efeito da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(CustoOminiSkill))
+            {
+                AddError("O campo Custo da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(AreaOminiSkill))
+            {
+                AddError("O campo Área da Omini Skill não foi informado.");
+            }
+
+            if (LevelOminiSkill < 0)
+            {
+                AddError("O campo Level da Omini Skill não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(UsoOminiSkill))
+            {
+                AddError("O campo Uso da Omini Skill não foi informado.");
+            }
         }
     }
 }

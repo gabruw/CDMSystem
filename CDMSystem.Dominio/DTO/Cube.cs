@@ -16,7 +16,22 @@ namespace CDMSystem.Dominio.DTO
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeItemCube))
+            {
+                AddError("O campo Nome do Item do Cube não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(DescricaoItemCube))
+            {
+                AddError("O campo Status do Item do Cube não foi informado.");
+            }
+
+            if (QuantidadeItemCube < 0)
+            {
+                AddError("O campo Quantidade do Item do Cube não foi informado.");
+            }
         }
     }
 }

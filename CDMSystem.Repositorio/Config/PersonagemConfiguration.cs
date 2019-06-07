@@ -12,11 +12,11 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(p => p.IdPersonagem);
 
-            //builder.HasOne(p => p.IdClassePersonagem).WithOne(c => c.IdClasse);
-            //builder.HasOne(p => p.IdRacaPersonagem);
-            //builder.HasOne(p => p.IdActiveSkillPersonagem);
-            //builder.HasOne(p => p.IdSecretPersonagem);
-            //builder.HasOne(p => p.IdCubePersonagem);
+            builder.Property(p => p.IdClassePersonagem);
+            builder.Property(p => p.IdRacaPersonagem);
+            builder.Property(p => p.IdActiveSkillPersonagem);
+            builder.Property(p => p.IdSecretPersonagem);
+            builder.Property(p => p.IdCubePersonagem);
 
             builder.Property(p => p.NomePersonagem).IsRequired().HasMaxLength(120).HasColumnType("varchar");
             builder.Property(p => p.OrdemPersonagem).IsRequired().HasMaxLength(30).HasColumnType("int");
