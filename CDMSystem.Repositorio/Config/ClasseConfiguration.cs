@@ -12,7 +12,9 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(c => c.IdClasse);
 
-            builder.Property(c => c.IdGuildClasse);
+            //builder.Property(c => c.IdGuildClasse);
+
+            builder.HasMany(c => c.OminiSkillClasse).WithOne(os => os.ClasseOminiSkill);
 
             builder.Property(c => c.NomeClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar");
             builder.Property(c => c.StatusClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar");

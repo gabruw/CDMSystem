@@ -6,6 +6,8 @@ namespace CDMSystem.Dominio.DTO
     {
         public int IdSecret { get; set; }
 
+        public int IdOminiSkillSecret { get; set; }
+
         public virtual ICollection<OminiSkill> OminiSkillSecret { get; set; }
 
         public string NomeSecret { get; set; }
