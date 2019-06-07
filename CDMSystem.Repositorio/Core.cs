@@ -6,7 +6,7 @@
         {
             var newCore = new Dominio.DTO.Core();
 
-            var coreRepository = new CoreRepository();
+            var coreRepository = new Repository.CoreRepository();
             coreRepository.Incluid(newCore);
         }
     }

@@ -6,7 +6,7 @@
         {
             var newCube = new Dominio.DTO.Cube();
 
-            var cubeRepository = new CubeRepository();
+            var cubeRepository = new Repository.CubeRepository();
             cubeRepository.Incluid(newCube);
         }
     }
