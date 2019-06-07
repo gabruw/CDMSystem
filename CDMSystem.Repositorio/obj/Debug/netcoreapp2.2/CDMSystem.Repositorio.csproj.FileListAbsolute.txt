@@ -10,3 +10,15 @@ C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\ob
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.csproj.CopyComplete
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.dll
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.2\CDMSystem.Repositorio.deps.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.2\CDMSystem.Repositorio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.2\CDMSystem.Repositorio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.csprojAssemblyReference.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.AssemblyInfoInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.AssemblyInfo.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.csproj.CopyComplete
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Repositorio\obj\Debug\netcoreapp2.2\CDMSystem.Repositorio.pdb
