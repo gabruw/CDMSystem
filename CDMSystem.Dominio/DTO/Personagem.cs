@@ -2,6 +2,11 @@
 {
     public class Personagem : DTODefault
     {
+        public Personagem()
+        {
+
+        }
+
         public int IdPersonagem { get; set; }
 
         public string IdRacaPersonagem { get; set; }

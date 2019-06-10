@@ -2,6 +2,11 @@
 {
     public class ActiveSkill : DTODefault
     {
+        public ActiveSkill()
+        {
+
+        }
+
         public int IdActiveSkill { get; set; }
 
         public string NomeActiveSkill { get; set; }

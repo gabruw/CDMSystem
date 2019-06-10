@@ -33,17 +33,17 @@ namespace CDMSystem.Repositorio.Config
             builder.Property(p => p.CritPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.AcrPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
 
-            //builder.HasOne(p => p.ElmoPersonagem);
-            //builder.HasOne(p => p.PeitoralPersonagem);
-            //builder.HasOne(p => p.BracoDireitoPersonagem);
-            //builder.HasOne(p => p.BracoEsquerdoPersonagem);
-            //builder.HasOne(p => p.CalcaPersonagem);
-            //builder.HasOne(p => p.BotaPersonagem);
-            //builder.HasOne(p => p.PendantePersonagem);
-            //builder.HasOne(p => p.AnelDireitoPersonagem);
-            //builder.HasOne(p => p.AnelEsquerdoPersonagem);
-            //builder.HasOne(p => p.ArmaPrimariaPersonagem);
-            //builder.HasOne(p => p.ArmaSecundariaPersonagem);
+            builder.HasOne(p => p.ElmoPersonagem);
+            builder.HasOne(p => p.PeitoralPersonagem);
+            builder.HasOne(p => p.BracoDireitoPersonagem);
+            builder.HasOne(p => p.BracoEsquerdoPersonagem);
+            builder.HasOne(p => p.CalcaPersonagem);
+            builder.HasOne(p => p.BotaPersonagem);
+            builder.HasOne(p => p.PendantePersonagem);
+            builder.HasOne(p => p.AnelDireitoPersonagem);
+            builder.HasOne(p => p.AnelEsquerdoPersonagem);
+            builder.HasOne(p => p.ArmaPrimariaPersonagem);
+            builder.HasOne(p => p.ArmaSecundariaPersonagem);
         }
     }
 }

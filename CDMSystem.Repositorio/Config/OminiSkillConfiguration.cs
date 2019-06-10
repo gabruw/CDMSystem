@@ -9,6 +9,9 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(o => o.IdOminiSkill);
 
+            builder.Property(o => o.IdClasseOminiSkill).IsRequired().HasMaxLength(11).HasColumnType("int");
+            builder.Property(o => o.IdSecretOminiSkill).IsRequired().HasMaxLength(11).HasColumnType("int");
+
             builder.Property(o => o.NomeOminiSkill).IsRequired().HasMaxLength(120).HasColumnType("varchar");
             builder.Property(o => o.LevelOminiSkill).IsRequired().HasMaxLength(3).HasColumnType("int");
             builder.Property(o => o.TipoOminiSkill).IsRequired().HasMaxLength(10).HasColumnType("varchar");

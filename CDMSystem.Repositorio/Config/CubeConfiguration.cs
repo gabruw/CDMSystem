@@ -9,9 +9,10 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(cb => cb.IdCube);
 
-            builder.Property(cb => cb.NomeItemCube).IsRequired().HasMaxLength(100).HasColumnType("varchar");
+            builder.HasMany(cb => cb.ItemCube).WithOne(i => i.CubeItem);
+
             builder.Property(cb => cb.QuantidadeItemCube).IsRequired().HasMaxLength(3).HasColumnType("int");
-            builder.Property(cb => cb.DescricaoItemCube).IsRequired().HasMaxLength(500).HasColumnType("varchar");
+            builder.Property(cb => cb.StatusItemCube).IsRequired().HasMaxLength(10).HasColumnType("varchar");
         }
     }
 }

@@ -2,6 +2,11 @@
 {
     public class Raca : DTODefault
     {
+        public Raca()
+        {
+
+        }
+
         public int IdRaca { get; set; }
 
         public string NomeRaca { get; set; }

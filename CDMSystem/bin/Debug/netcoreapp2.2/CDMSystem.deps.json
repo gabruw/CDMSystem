@@ -470,6 +470,7 @@
       "CDMSystem.Repositorio/1.0.0": {
         "dependencies": {
           "CDMSystem.Dominio": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Proxies": "2.2.4",
           "Pomelo.EntityFrameworkCore.MySql": "2.2.0"
         },

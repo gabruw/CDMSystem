@@ -31,3 +31,4 @@ C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netc
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.csproj.CopyComplete
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.dll
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.pdb
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\config.json

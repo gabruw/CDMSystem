@@ -22,26 +22,29 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
             modelBuilder.ApplyConfiguration(new CoreConfiguration());
             modelBuilder.ApplyConfiguration(new CubeConfiguration());
+            modelBuilder.ApplyConfiguration(new ItemConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Personagem> Personagems { get; set; }
+        //public DbSet<Personagem> Personagems { get; set; }
 
-        public DbSet<Classe> Classe { get; set; }
+        //public DbSet<Classe> Classe { get; set; }
 
-        public DbSet<Raca> Racas { get; set; }
+        //public DbSet<Raca> Racas { get; set; }
 
         public DbSet<Guild> Guild { get; set; }
 
-        public DbSet<Secret> Secret { get; set; }
+        //public DbSet<Secret> Secret { get; set; }
 
-        public DbSet<ActiveSkill> ActiveSkill { get; set; }
+        //public DbSet<ActiveSkill> ActiveSkill { get; set; }
 
-        public DbSet<OminiSkill> OminiSkill { get; set; }  
+        //public DbSet<OminiSkill> OminiSkill { get; set; }  
 
-        public DbSet<Core> Core { get; set; }  
+        //public DbSet<Core> Core { get; set; }  
 
-        public DbSet<Cube> Cube { get; set; }  
+        //public DbSet<Cube> Cube { get; set; } 
+        
+        //public DbSet<Item> Item { get; set; }  
     }
 }

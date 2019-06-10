@@ -4,6 +4,11 @@ namespace CDMSystem.Dominio.DTO
 {
     public class Guild : DTODefault
     {
+        public Guild()
+        {
+
+        }
+
         public int IdGuild { get; set; }
 
         public string NomeGuild { get; set; }

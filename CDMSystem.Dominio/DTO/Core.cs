@@ -2,6 +2,11 @@
 {
     public class Core : DTODefault
     {
+        public Core()
+        {
+
+        }
+
         public int IdCore { get; set; }
 
         public int HpCore { get; set; }

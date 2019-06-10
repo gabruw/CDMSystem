@@ -4,6 +4,11 @@ namespace CDMSystem.Dominio.DTO
 {
     public class OminiSkill : DTODefault
     {
+        public OminiSkill()
+        {
+
+        }
+
         public int IdOminiSkill { get; set; }
 
         public int IdClasseOminiSkill { get; set; }
@@ -13,6 +18,10 @@ namespace CDMSystem.Dominio.DTO
         public int IdSecretOminiSkill { get; set; }
 
         public virtual Secret SecretOminiSkill { get; set; }
+
+        public int IdItemOminiSkill { get; set; }
+
+        public virtual Item ItemOminiSkill { get; set; }
 
         public string NomeOminiSkill { get; set; }
 

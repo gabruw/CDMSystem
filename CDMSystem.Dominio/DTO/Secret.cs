@@ -4,6 +4,11 @@ namespace CDMSystem.Dominio.DTO
 {
     public class Secret : DTODefault
     {
+        public Secret()
+        {
+
+        }
+
         public int IdSecret { get; set; }
 
         public int IdOminiSkillSecret { get; set; }

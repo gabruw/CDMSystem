@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "CDMSystemDB": "Server=localhost;Database=CDMSystemDB;Uid=root;Pwd=;"
+  }
+}
