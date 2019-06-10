@@ -21,7 +21,7 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
             modelBuilder.ApplyConfiguration(new CoreConfiguration());
-            modelBuilder.ApplyConfiguration(new CubreConfiguration());
+            modelBuilder.ApplyConfiguration(new CubeConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CDMSystem.Repositorio.Config
 {
@@ -12,7 +9,7 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(c => c.IdClasse);
 
-            //builder.Property(c => c.IdGuildClasse);
+            builder.Property(c => c.IdGuildClasse);
 
             builder.HasMany(c => c.OminiSkillClasse).WithOne(os => os.ClasseOminiSkill);
 
