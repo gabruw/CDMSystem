@@ -9,8 +9,8 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(acs => acs.IdActiveSkill);
 
-            builder.Property(acs => acs.NomeActiveSkill).IsRequired().HasMaxLength(120).HasColumnType("varchar");
-            builder.Property(acs => acs.DescricaoActiveSkill).IsRequired().HasMaxLength(500).HasColumnType("varchar");
+            builder.Property(acs => acs.NomeActiveSkill).IsRequired().HasMaxLength(120).HasColumnType("varchar(120)");
+            builder.Property(acs => acs.DescricaoActiveSkill).IsRequired().HasMaxLength(500).HasColumnType("varchar(500)");
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace CDMSystem.Dominio.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CDMSystem.Dominio.DTO
 {
     public class Raca : DTODefault
     {
@@ -7,6 +9,7 @@
 
         }
 
+        [Key]
         public int IdRaca { get; set; }
 
         public string NomeRaca { get; set; }

@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -9,16 +12,20 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdOminiSkill { get; set; }
 
+        [ForeignKey("IdClasse")]
         public int IdClasseOminiSkill { get; set; }
 
         public virtual Classe ClasseOminiSkill { get; set; }
 
+        [ForeignKey("IdSecret")]
         public int IdSecretOminiSkill { get; set; }
 
         public virtual Secret SecretOminiSkill { get; set; }
 
+        [ForeignKey("IdOminiSkill")]
         public int IdItemOminiSkill { get; set; }
 
         public virtual Item ItemOminiSkill { get; set; }
@@ -41,7 +48,8 @@ namespace CDMSystem.Dominio.DTO
 
         public string UsoOminiSkill { get; set; }
 
-        public virtual ICollection<string> PreRequisitoOminiSkill { get; set; }
+        [ForeignKey("IdPreRequisito")]
+        public virtual ICollection<PreRequisito> PreRequisitoOminiSkill { get; set; }
 
         public override void Validate()
         {

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -9,10 +11,10 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdSecret { get; set; }
 
-        public int IdOminiSkillSecret { get; set; }
-
+        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillSecret { get; set; }
 
         public string NomeSecret { get; set; }

@@ -1,4 +1,7 @@
-﻿namespace CDMSystem.Dominio.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CDMSystem.Dominio.DTO
 {
     public class Personagem : DTODefault
     {
@@ -7,24 +10,30 @@
 
         }
 
+        [Key]
         public int IdPersonagem { get; set; }
 
+        [ForeignKey("IdRaca")]
         public string IdRacaPersonagem { get; set; }
 
         public virtual Raca RacaPersonagem { get; set; }
 
+        [ForeignKey("IdSecret")]
         public string IdSecretPersonagem { get; set; }
 
         public virtual Secret SecretPersonagem { get; set; }
 
+        [ForeignKey("IdClasse")]
         public string IdClassePersonagem { get; set; }
 
         public virtual Classe ClassePersonagem { get; set; }
 
+        [ForeignKey("IDActiveSkill")]
         public string IdActiveSkillPersonagem { get; set; }
 
         public virtual ActiveSkill ActiveSkillPersonagem { get; set; }
 
+        [ForeignKey("IDCube")]
         public string IdCubePersonagem { get; set; }
 
         public virtual Cube CubePersonagem { get; set; }

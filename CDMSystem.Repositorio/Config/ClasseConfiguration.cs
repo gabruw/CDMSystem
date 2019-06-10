@@ -13,13 +13,13 @@ namespace CDMSystem.Repositorio.Config
 
             builder.HasMany(c => c.OminiSkillClasse).WithOne(os => os.ClasseOminiSkill);
 
-            builder.Property(c => c.NomeClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(c => c.StatusClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(c => c.ArmaduraClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(c => c.ArmaPrimariaClasse).IsRequired().HasMaxLength(60).HasColumnType("varchar");
-            builder.Property(c => c.ArmaSecundariaClasse).IsRequired().HasMaxLength(60).HasColumnType("varchar");
-            builder.Property(c => c.PenalidadeClasse).IsRequired().HasMaxLength(300).HasColumnType("varchar");
-            builder.Property(c => c.HabilidadePassivaClasse).IsRequired().HasMaxLength(300).HasColumnType("varchar");
+            builder.Property(c => c.NomeClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(c => c.StatusClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(c => c.ArmaduraClasse).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(c => c.ArmaPrimariaClasse).IsRequired().HasMaxLength(60).HasColumnType("varchar(60)");
+            builder.Property(c => c.ArmaSecundariaClasse).IsRequired().HasMaxLength(60).HasColumnType("varchar(60)");
+            builder.Property(c => c.PenalidadeClasse).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(c => c.HabilidadePassivaClasse).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
 
             builder.Property(c => c.HpClasse).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(c => c.MpClasse).IsRequired().HasMaxLength(4).HasColumnType("int");
@@ -31,10 +31,10 @@ namespace CDMSystem.Repositorio.Config
             builder.Property(c => c.CritClasse).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(c => c.AcrClasse).IsRequired().HasMaxLength(4).HasColumnType("int");
 
-            builder.Property(c => c.PericiaLaminasClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar");
-            builder.Property(c => c.PericiaLongaDistanciaClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar");
-            builder.Property(c => c.PericiaArremecoClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar");
-            builder.Property(c => c.PericiaCorpoCorpoClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar");
+            builder.Property(c => c.PericiaLaminasClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar(1)");
+            builder.Property(c => c.PericiaLongaDistanciaClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar(1)");
+            builder.Property(c => c.PericiaArremecoClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar(1)");
+            builder.Property(c => c.PericiaCorpoCorpoClasse).IsRequired().HasMaxLength(1).HasColumnType("varchar(1)");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -10,12 +11,15 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdClasse { get; set; }
 
+        [ForeignKey("IdGuild")]
         public string IdGuildClasse { get; set; }
 
         public virtual Guild GuildClasse { get; set; }
 
+        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillClasse { get; set; }
 
         public string NomeClasse { get; set; }

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -11,8 +11,10 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdItem { get; set; }
 
+        [ForeignKey("IdCube")]
         public int IdCubeItem { get; set; }
 
         public virtual Cube CubeItem { get; set; }
@@ -45,6 +47,7 @@ namespace CDMSystem.Dominio.DTO
 
         public int AcrItem { get; set; }
 
+        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillItem { get; set; }
 
         public override void Validate()

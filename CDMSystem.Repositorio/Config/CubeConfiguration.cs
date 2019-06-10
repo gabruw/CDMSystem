@@ -12,7 +12,7 @@ namespace CDMSystem.Repositorio.Config
             builder.HasMany(cb => cb.ItemCube).WithOne(i => i.CubeItem);
 
             builder.Property(cb => cb.QuantidadeItemCube).IsRequired().HasMaxLength(3).HasColumnType("int");
-            builder.Property(cb => cb.StatusItemCube).IsRequired().HasMaxLength(10).HasColumnType("varchar");
+            builder.Property(cb => cb.StatusItemCube).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");
         }
     }
 }

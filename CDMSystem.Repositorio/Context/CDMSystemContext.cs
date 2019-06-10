@@ -13,16 +13,19 @@ namespace CDMSystem.Repositorio.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new PersonagemConfiguration());
-            modelBuilder.ApplyConfiguration(new RacaConfiguration());
-            modelBuilder.ApplyConfiguration(new SecretConfiguration());
-            modelBuilder.ApplyConfiguration(new ClasseConfiguration());
-            modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
-            modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
+            //modelBuilder.Ignore<Guild>();
+
+            //modelBuilder.ApplyConfiguration(new PersonagemConfiguration());
+            //modelBuilder.ApplyConfiguration(new RacaConfiguration());
+            //modelBuilder.ApplyConfiguration(new SecretConfiguration());
+            //modelBuilder.ApplyConfiguration(new ClasseConfiguration());
+            //modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
+            //modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
-            modelBuilder.ApplyConfiguration(new CoreConfiguration());
-            modelBuilder.ApplyConfiguration(new CubeConfiguration());
+            //modelBuilder.ApplyConfiguration(new CoreConfiguration());
+            //modelBuilder.ApplyConfiguration(new CubeConfiguration());
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
+            modelBuilder.ApplyConfiguration(new PreRequisitoConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -44,7 +47,9 @@ namespace CDMSystem.Repositorio.Context
         //public DbSet<Core> Core { get; set; }  
 
         //public DbSet<Cube> Cube { get; set; } 
-        
+
         //public DbSet<Item> Item { get; set; }  
+
+        //public DbSet<PreRequisito> PreRequisito { get; set; }  
     }
 }

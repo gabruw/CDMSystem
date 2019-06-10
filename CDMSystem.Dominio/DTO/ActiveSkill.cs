@@ -1,4 +1,6 @@
-﻿namespace CDMSystem.Dominio.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CDMSystem.Dominio.DTO
 {
     public class ActiveSkill : DTODefault
     {
@@ -7,6 +9,7 @@
 
         }
 
+        [Key]
         public int IdActiveSkill { get; set; }
 
         public string NomeActiveSkill { get; set; }

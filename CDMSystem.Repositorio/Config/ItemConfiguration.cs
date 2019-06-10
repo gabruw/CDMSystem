@@ -10,11 +10,11 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(i => i.IdItem);
 
-            builder.Property(i => i.NomeItem).IsRequired().HasMaxLength(100).HasColumnType("varchar");
-            builder.Property(i => i.DescricaoItem).IsRequired().HasMaxLength(500).HasColumnType("varchar");
-            builder.Property(i => i.RaridadeItem).IsRequired().HasMaxLength(10).HasColumnType("varchar");
-            builder.Property(i => i.RankItem).IsRequired().HasMaxLength(3).HasColumnType("varchar");
-            builder.Property(i => i.TipoItem).IsRequired().HasMaxLength(20).HasColumnType("varchar");
+            builder.Property(i => i.NomeItem).IsRequired().HasMaxLength(100).HasColumnType("varchar(100)");
+            builder.Property(i => i.DescricaoItem).IsRequired().HasMaxLength(500).HasColumnType("varchar(500)");
+            builder.Property(i => i.RaridadeItem).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");
+            builder.Property(i => i.RankItem).IsRequired().HasMaxLength(3).HasColumnType("varchar(3)");
+            builder.Property(i => i.TipoItem).IsRequired().HasMaxLength(20).HasColumnType("varchar(20)");
 
             builder.Property(i => i.HpItem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(i => i.MpItem).IsRequired().HasMaxLength(4).HasColumnType("int");

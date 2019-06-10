@@ -9,8 +9,8 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(g => g.IdGuild);
 
-            builder.Property(g => g.NomeGuild).IsRequired().HasMaxLength(60).HasColumnType("varchar");
-            builder.Property(g => g.DescricaoGuild).IsRequired().HasMaxLength(500).HasColumnType("varchar");
+            builder.Property(g => g.NomeGuild).IsRequired().HasMaxLength(60).HasColumnType("varchar(60)");
+            builder.Property(g => g.DescricaoGuild).IsRequired().HasMaxLength(500).HasColumnType("varchar(500)");
         }
     }
 }

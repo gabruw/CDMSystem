@@ -1,4 +1,6 @@
-﻿namespace CDMSystem.Dominio.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CDMSystem.Dominio.DTO
 {
     public class Core : DTODefault
     {
@@ -7,7 +9,14 @@
 
         }
 
+        [Key]
         public int IdCore { get; set; }
+
+        public string NomeCore { get; set; }
+
+        public string DescricaoCore { get; set; }
+
+        public string TipoCore { get; set; }
 
         public int HpCore { get; set; }
 
@@ -30,6 +39,21 @@
         public override void Validate()
         {
             ClearValidateMensages();
+
+            if (string.IsNullOrEmpty(NomeCore))
+            {
+                AddError("O campo Nome do Core não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(DescricaoCore))
+            {
+                AddError("O campo Descrição do Core não foi informado.");
+            }
+
+            if (string.IsNullOrEmpty(TipoCore))
+            {
+                AddError("O campo Tipo do Core não foi informado.");
+            }
 
             if (HpCore <= 0)
             {

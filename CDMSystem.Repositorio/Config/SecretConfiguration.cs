@@ -9,17 +9,15 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(s => s.IdSecret);
 
-            //builder.Property(s => s.OminiSkillSecret);
-
             builder.HasMany(s => s.OminiSkillSecret).WithOne(os => os.SecretOminiSkill);
 
-            builder.Property(s => s.NomeSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(s => s.TempoSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(s => s.TempoEsperaSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(s => s.AposSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar");
-            builder.Property(s => s.BonusAposSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar");
-            builder.Property(s => s.BonusSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar");
-            builder.Property(s => s.DescricaoSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar");
+            builder.Property(s => s.NomeSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(s => s.TempoSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(s => s.TempoEsperaSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(s => s.AposSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(s => s.BonusAposSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(s => s.BonusSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(s => s.DescricaoSecret).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
         }
     }
 }

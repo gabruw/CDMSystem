@@ -9,6 +9,10 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(cr => cr.IdCore);
 
+            builder.Property(cr => cr.NomeCore).IsRequired().HasMaxLength(100).HasColumnType("varchar(100)");
+            builder.Property(cr => cr.DescricaoCore).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(cr => cr.TipoCore).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");
+
             builder.Property(cr => cr.HpCore).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(cr => cr.MpCore).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(cr => cr.DmgfCore).IsRequired().HasMaxLength(4).HasColumnType("int");

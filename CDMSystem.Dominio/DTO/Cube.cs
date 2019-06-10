@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -11,8 +11,10 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdCube { get; set; }
 
+        [ForeignKey("IdItem")]
         public virtual ICollection<Item> ItemCube { get; set; }
 
         public int QuantidadeItemCube { get; set; }

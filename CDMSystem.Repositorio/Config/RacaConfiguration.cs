@@ -9,9 +9,9 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(r => r.IdRaca);
 
-            builder.Property(r => r.NomeRaca).IsRequired().HasMaxLength(40).HasColumnType("varchar");
-            builder.Property(r => r.BonusRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar");
-            builder.Property(r => r.RaceSkillRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar");
+            builder.Property(r => r.NomeRaca).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
+            builder.Property(r => r.BonusRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+            builder.Property(r => r.RaceSkillRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
         }
     }
 }

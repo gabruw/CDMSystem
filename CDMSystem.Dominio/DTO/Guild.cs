@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -9,6 +9,7 @@ namespace CDMSystem.Dominio.DTO
 
         }
 
+        [Key]
         public int IdGuild { get; set; }
 
         public string NomeGuild { get; set; }
