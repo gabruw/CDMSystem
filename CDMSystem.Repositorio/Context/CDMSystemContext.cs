@@ -13,43 +13,53 @@ namespace CDMSystem.Repositorio.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Ignore<Guild>();
+            modelBuilder.Ignore<Raca>();
+            modelBuilder.Ignore<Core>();
+            modelBuilder.Ignore<Cube>();
+            modelBuilder.Ignore<Item>();
+            modelBuilder.Ignore<Guild>();
+            modelBuilder.Ignore<Secret>();
+            modelBuilder.Ignore<Classe>();
+            modelBuilder.Ignore<Personagem>();
+            modelBuilder.Ignore<OminiSkill>();
+            modelBuilder.Ignore<ActiveSkill>();
+            modelBuilder.Ignore<PreRequisito>();
 
-            //modelBuilder.ApplyConfiguration(new PersonagemConfiguration());
-            //modelBuilder.ApplyConfiguration(new RacaConfiguration());
-            //modelBuilder.ApplyConfiguration(new SecretConfiguration());
-            //modelBuilder.ApplyConfiguration(new ClasseConfiguration());
-            //modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
-            //modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
+            modelBuilder.ApplyConfiguration(new PersonagemConfiguration());
+            modelBuilder.ApplyConfiguration(new RacaConfiguration());
+            modelBuilder.ApplyConfiguration(new SecretConfiguration());
+            modelBuilder.ApplyConfiguration(new ClasseConfiguration());
+            modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
+            modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
-            //modelBuilder.ApplyConfiguration(new CoreConfiguration());
-            //modelBuilder.ApplyConfiguration(new CubeConfiguration());
+            modelBuilder.ApplyConfiguration(new CoreConfiguration());
+            modelBuilder.ApplyConfiguration(new CubeConfiguration());
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
             modelBuilder.ApplyConfiguration(new PreRequisitoConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
 
-        //public DbSet<Personagem> Personagems { get; set; }
+        public DbSet<Personagem> Personagems { get; set; }
 
-        //public DbSet<Classe> Classe { get; set; }
+        public DbSet<Classe> Classe { get; set; }
 
-        //public DbSet<Raca> Racas { get; set; }
+        public DbSet<Raca> Racas { get; set; }
 
         public DbSet<Guild> Guild { get; set; }
 
-        //public DbSet<Secret> Secret { get; set; }
+        public DbSet<Secret> Secret { get; set; }
 
-        //public DbSet<ActiveSkill> ActiveSkill { get; set; }
+        public DbSet<ActiveSkill> ActiveSkill { get; set; }
 
-        //public DbSet<OminiSkill> OminiSkill { get; set; }  
+        public DbSet<OminiSkill> OminiSkill { get; set; }
 
-        //public DbSet<Core> Core { get; set; }  
+        public DbSet<Core> Core { get; set; }
 
-        //public DbSet<Cube> Cube { get; set; } 
+        public DbSet<Cube> Cube { get; set; }
 
-        //public DbSet<Item> Item { get; set; }  
+        public DbSet<Item> Item { get; set; }
 
-        //public DbSet<PreRequisito> PreRequisito { get; set; }  
+        public DbSet<PreRequisito> PreRequisito { get; set; }
     }
 }
