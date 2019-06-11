@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CDMSystem.Repositorio.Migrations
 {
     [DbContext(typeof(CDMSystemContext))]
-    [Migration("20190611144911_FirstMigration")]
+    [Migration("20190611164519_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
