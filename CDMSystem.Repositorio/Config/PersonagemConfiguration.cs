@@ -32,18 +32,6 @@ namespace CDMSystem.Repositorio.Config
             builder.Property(p => p.DetPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.CritPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.AcrPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
-
-            builder.HasOne(p => p.ElmoPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.PeitoralPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.BracoDireitoPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.BracoEsquerdoPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.CalcaPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.BotaPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.PendantePersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.AnelDireitoPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.AnelEsquerdoPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.ArmaPrimariaPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
-            builder.HasOne(p => p.ArmaSecundariaPersonagem).WithMany().HasForeignKey(p => p.IdCorePersonagem);
         }
     }
 }

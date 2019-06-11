@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
@@ -38,8 +39,6 @@ namespace CDMSystem.Dominio.DTO
         [ForeignKey("IdCubePersonagem")]
         public virtual Cube CubePersonagem { get; set; }
 
-        public int IdCorePersonagem { get; set; }
-
         public string NomePersonagem { get; set; }
 
         public int LevelPersonagem { get; set; }
@@ -71,42 +70,6 @@ namespace CDMSystem.Dominio.DTO
         public int CritPersonagem { get; set; }
 
         public int AcrPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core ElmoPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core PeitoralPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core BracoDireitoPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core BracoEsquerdoPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core CalcaPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core BotaPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core ArmaPrimariaPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core ArmaSecundariaPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core PendantePersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core AnelDireitoPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core AnelEsquerdoPersonagem { get; set; }
-
-        [ForeignKey("IdCorePersonagem")]
-        public virtual Core AsaPersonagem { get; set; }
 
         public override void Validate()
         {

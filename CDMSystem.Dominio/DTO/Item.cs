@@ -29,6 +29,8 @@ namespace CDMSystem.Dominio.DTO
 
         public string TipoItem { get; set; }
 
+        public string StatusItem { get; set; }
+
         public int HpItem { get; set; }
 
         public int MpItem { get; set; }

@@ -14,7 +14,6 @@ namespace CDMSystem.Repositorio.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Raca>();
-            modelBuilder.Ignore<Core>();
             modelBuilder.Ignore<Cube>();
             modelBuilder.Ignore<Item>();
             modelBuilder.Ignore<Guild>();
@@ -32,7 +31,6 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
             modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new GuildConfiguration());
-            modelBuilder.ApplyConfiguration(new CoreConfiguration());
             modelBuilder.ApplyConfiguration(new CubeConfiguration());
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
             modelBuilder.ApplyConfiguration(new PreRequisitoConfiguration());
@@ -53,8 +51,6 @@ namespace CDMSystem.Repositorio.Context
         public DbSet<ActiveSkill> ActiveSkill { get; set; }
 
         public DbSet<OminiSkill> OminiSkill { get; set; }
-
-        public DbSet<Core> Core { get; set; }
 
         public DbSet<Cube> Cube { get; set; }
 

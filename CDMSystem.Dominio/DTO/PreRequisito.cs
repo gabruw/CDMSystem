@@ -19,7 +19,7 @@ namespace CDMSystem.Dominio.DTO
         public int IdOminiSkillPreRequisito { get; set; }
 
         [ForeignKey("IdOminiSkillPreRequisito")]
-        public OminiSkill OminiSkillPreRequisito { get; set; }
+        public virtual OminiSkill OminiSkillPreRequisito { get; set; }
 
         public override void Validate()
         {
