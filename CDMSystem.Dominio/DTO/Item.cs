@@ -14,9 +14,9 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         public int IdItem { get; set; }
 
-        [ForeignKey("IdCube")]
         public int IdCubeItem { get; set; }
 
+        [ForeignKey("IdCubeItem")]
         public virtual Cube CubeItem { get; set; }
 
         public string NomeItem { get; set; }
@@ -47,7 +47,6 @@ namespace CDMSystem.Dominio.DTO
 
         public int AcrItem { get; set; }
 
-        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillItem { get; set; }
 
         public override void Validate()

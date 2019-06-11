@@ -10,6 +10,8 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(i => i.IdItem);
 
+            builder.HasOne(i => i.CubeItem).WithMany().HasForeignKey(i => i.IdCubeItem);
+
             builder.Property(i => i.NomeItem).IsRequired().HasMaxLength(100).HasColumnType("varchar(100)");
             builder.Property(i => i.DescricaoItem).IsRequired().HasMaxLength(500).HasColumnType("varchar(500)");
             builder.Property(i => i.RaridadeItem).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");
@@ -26,7 +28,7 @@ namespace CDMSystem.Repositorio.Config
             builder.Property(i => i.CritItem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(i => i.AcrItem).IsRequired().HasMaxLength(4).HasColumnType("int");
 
-            builder.HasMany(i => i.OminiSkillItem).WithOne(os => os.ItemOminiSkill);
+            builder.HasMany(i => i.OminiSkillItem).WithOne(os => os.ItemOminiSkill).HasForeignKey(os => os.IdOminiSkill);
         }
     }
 }

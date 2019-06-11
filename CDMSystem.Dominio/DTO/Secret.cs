@@ -14,7 +14,6 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         public int IdSecret { get; set; }
 
-        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillSecret { get; set; }
 
         public string NomeSecret { get; set; }

@@ -15,19 +15,19 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         public int IdOminiSkill { get; set; }
 
-        [ForeignKey("IdClasse")]
         public int IdClasseOminiSkill { get; set; }
 
+        [ForeignKey("IdClasseOminiSkill")]
         public virtual Classe ClasseOminiSkill { get; set; }
-
-        [ForeignKey("IdSecret")]
+        
         public int IdSecretOminiSkill { get; set; }
 
+        [ForeignKey("IdSecretOminiSkill")]
         public virtual Secret SecretOminiSkill { get; set; }
 
-        [ForeignKey("IdOminiSkill")]
         public int IdItemOminiSkill { get; set; }
 
+        [ForeignKey("IdItemOminiSkill")]
         public virtual Item ItemOminiSkill { get; set; }
 
         public string NomeOminiSkill { get; set; }
@@ -48,7 +48,6 @@ namespace CDMSystem.Dominio.DTO
 
         public string UsoOminiSkill { get; set; }
 
-        [ForeignKey("IdPreRequisito")]
         public virtual ICollection<PreRequisito> PreRequisitoOminiSkill { get; set; }
 
         public override void Validate()

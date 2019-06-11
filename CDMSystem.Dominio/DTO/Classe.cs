@@ -13,13 +13,12 @@ namespace CDMSystem.Dominio.DTO
 
         [Key]
         public int IdClasse { get; set; }
+        
+        public int IdGuildClasse { get; set; }
 
-        [ForeignKey("IdGuild")]
-        public string IdGuildClasse { get; set; }
-
+        [ForeignKey("IdGuildClasse")]
         public virtual Guild GuildClasse { get; set; }
 
-        [ForeignKey("IdOminiSkill")]
         public virtual ICollection<OminiSkill> OminiSkillClasse { get; set; }
 
         public string NomeClasse { get; set; }

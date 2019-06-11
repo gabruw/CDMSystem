@@ -9,7 +9,7 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(cb => cb.IdCube);
 
-            builder.HasMany(cb => cb.ItemCube).WithOne(i => i.CubeItem);
+            builder.HasMany(cb => cb.ItemCube).WithOne(i => i.CubeItem).HasForeignKey(i => i.IdItem);
 
             builder.Property(cb => cb.QuantidadeItemCube).IsRequired().HasMaxLength(3).HasColumnType("int");
             builder.Property(cb => cb.StatusItemCube).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");

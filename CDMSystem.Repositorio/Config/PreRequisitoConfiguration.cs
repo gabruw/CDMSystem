@@ -10,6 +10,8 @@ namespace CDMSystem.Repositorio.Config
             builder.HasKey(pr => pr.IdPreRequisito);
 
             builder.Property(pr => pr.DescricaoPreRequisito).IsRequired().HasMaxLength(500).HasColumnType("varchar(500)");
+
+            builder.HasOne(pr => pr.OminiSkillPreRequisito).WithMany().HasForeignKey(o => o.IdOminiSkillPreRequisito);
         }
     }
 }

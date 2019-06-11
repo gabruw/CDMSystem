@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -13,6 +15,11 @@ namespace CDMSystem.Dominio.DTO
         public int IdPreRequisito { get; set; }
 
         public string DescricaoPreRequisito { get; set; }
+
+        public int IdOminiSkillPreRequisito { get; set; }
+
+        [ForeignKey("IdOminiSkillPreRequisito")]
+        public OminiSkill OminiSkillPreRequisito { get; set; }
 
         public override void Validate()
         {

@@ -13,30 +13,32 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         public int IdPersonagem { get; set; }
 
-        [ForeignKey("IdRaca")]
-        public string IdRacaPersonagem { get; set; }
+        public int IdRacaPersonagem { get; set; }
 
+        [ForeignKey("IdRacaPersonagem")]
         public virtual Raca RacaPersonagem { get; set; }
 
-        [ForeignKey("IdSecret")]
-        public string IdSecretPersonagem { get; set; }
+        public int IdSecretPersonagem { get; set; }
 
+        [ForeignKey("IdSecretPersonagem")]
         public virtual Secret SecretPersonagem { get; set; }
 
-        [ForeignKey("IdClasse")]
-        public string IdClassePersonagem { get; set; }
+        public int IdClassePersonagem { get; set; }
 
+        [ForeignKey("IdClassePersonagem")]
         public virtual Classe ClassePersonagem { get; set; }
 
-        [ForeignKey("IDActiveSkill")]
-        public string IdActiveSkillPersonagem { get; set; }
+        public int IdActiveSkillPersonagem { get; set; }
 
+        [ForeignKey("IdActiveSkillPersonagem")]
         public virtual ActiveSkill ActiveSkillPersonagem { get; set; }
 
-        [ForeignKey("IDCube")]
-        public string IdCubePersonagem { get; set; }
+        public int IdCubePersonagem { get; set; }
 
+        [ForeignKey("IdCubePersonagem")]
         public virtual Cube CubePersonagem { get; set; }
+
+        public int IdCorePersonagem { get; set; }
 
         public string NomePersonagem { get; set; }
 
@@ -55,7 +57,7 @@ namespace CDMSystem.Dominio.DTO
         public int HpPersonagem { get; set; }
 
         public int MpPersonagem { get; set; }
-
+        
         public int DmgfPersonagem { get; set; }
 
         public int DmgmPersonagem { get; set; }
@@ -70,28 +72,40 @@ namespace CDMSystem.Dominio.DTO
 
         public int AcrPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core ElmoPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core PeitoralPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core BracoDireitoPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core BracoEsquerdoPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core CalcaPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core BotaPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core ArmaPrimariaPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core ArmaSecundariaPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core PendantePersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core AnelDireitoPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core AnelEsquerdoPersonagem { get; set; }
 
+        [ForeignKey("IdCorePersonagem")]
         public virtual Core AsaPersonagem { get; set; }
 
         public override void Validate()

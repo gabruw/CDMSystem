@@ -14,7 +14,6 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         public int IdCube { get; set; }
 
-        [ForeignKey("IdItem")]
         public virtual ICollection<Item> ItemCube { get; set; }
 
         public int QuantidadeItemCube { get; set; }

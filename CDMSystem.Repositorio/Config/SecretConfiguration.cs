@@ -9,7 +9,7 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(s => s.IdSecret);
 
-            builder.HasMany(s => s.OminiSkillSecret).WithOne(os => os.SecretOminiSkill);
+            builder.HasMany(s => s.OminiSkillSecret).WithOne(os => os.SecretOminiSkill).HasForeignKey(os => os.IdOminiSkill);
 
             builder.Property(s => s.NomeSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
             builder.Property(s => s.TempoSecret).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
