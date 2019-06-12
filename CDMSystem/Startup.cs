@@ -36,12 +36,15 @@ namespace CDMSystem
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             var connectionString = Configuration.GetConnectionString("CDMSystemDB");
             services.AddDbContext<CDMSystemContext>(option => 
                                                             option.UseLazyLoadingProxies().UseMySql(connectionString, 
                                                                 m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // Scope's
+            services.AddScoped<Dominio.Repository.IGuildRepository, Repositorio.GuildRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
