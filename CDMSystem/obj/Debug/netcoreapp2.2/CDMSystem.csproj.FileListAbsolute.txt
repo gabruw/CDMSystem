@@ -32,3 +32,37 @@ C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netc
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.dll
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.pdb
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\config.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\config.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.deps.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.runtimeconfig.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.runtimeconfig.dev.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Views.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Views.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Repositorio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Repositorio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.csprojAssemblyReference.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.csproj.CoreCompileInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.RazorAssemblyInfo.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.RazorAssemblyInfo.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.AssemblyInfoInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.AssemblyInfo.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.TagHelpers.input.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.TagHelpers.output.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.RazorCoreGenerate.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.RazorTargetAssemblyInfo.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.RazorTargetAssemblyInfo.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.Views.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.csproj.CopyComplete
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem\obj\Debug\netcoreapp2.2\CDMSystem.pdb

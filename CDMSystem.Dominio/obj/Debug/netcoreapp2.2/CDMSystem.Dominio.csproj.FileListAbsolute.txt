@@ -7,3 +7,12 @@ C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\De
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.AssemblyInfo.cs
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.dll
 C:\Users\SHU Aeronáutica 01\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.deps.json
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\bin\Debug\netcoreapp2.2\CDMSystem.Dominio.pdb
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.csprojAssemblyReference.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.AssemblyInfoInputs.cache
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.AssemblyInfo.cs
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.dll
+C:\Users\snyp_\Documents\GitHub\CDMSystem\CDMSystem.Dominio\obj\Debug\netcoreapp2.2\CDMSystem.Dominio.pdb
