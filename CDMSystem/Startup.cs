@@ -38,13 +38,23 @@ namespace CDMSystem
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            var connectionString = Configuration.GetConnectionString("CDMSystemDB");
+            // DB Connection
+            var connectionString = Configuration.GetConnectionString("db_CDMSystem");
             services.AddDbContext<CDMSystemContext>(option => 
                                                             option.UseLazyLoadingProxies().UseMySql(connectionString, 
                                                                 m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
             // Scope's
+            services.AddScoped<Dominio.Repository.IActiveSkillRepository, Repositorio.ActiveSkillRepository>();
+            services.AddScoped<Dominio.Repository.IClasseRepository, Repositorio.ClasseRepository>();
+            services.AddScoped<Dominio.Repository.ICubeRepository, Repositorio.Repository.CubeRepository>();
             services.AddScoped<Dominio.Repository.IGuildRepository, Repositorio.GuildRepository>();
+            services.AddScoped<Dominio.Repository.IItemRepository, Repositorio.Repository.ItemRepository>();
+            services.AddScoped<Dominio.Repository.IOminiSkillRepository, Repositorio.OminiSkillRepository>();
+            services.AddScoped<Dominio.Repository.IPersonagemRepository, Repositorio.PersonagemRepository>();
+            services.AddScoped<Dominio.Repository.IPreRequisitoRepository, Repositorio.PreRequisitoRepository>();
+            services.AddScoped<Dominio.Repository.IRacaRepository, Repositorio.RacaRepository>();
+            services.AddScoped<Dominio.Repository.ISecretRepository, Repositorio.SecretRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
