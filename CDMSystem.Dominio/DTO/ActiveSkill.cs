@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
 {
@@ -10,6 +11,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdActiveSkill { get; set; }
 
         public string NomeActiveSkill { get; set; }

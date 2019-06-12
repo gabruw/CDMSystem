@@ -12,6 +12,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdCube { get; set; }
 
         public virtual ICollection<Item> ItemCube { get; set; }

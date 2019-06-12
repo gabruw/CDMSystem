@@ -12,6 +12,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdClasse { get; set; }
         
         public int IdGuildClasse { get; set; }

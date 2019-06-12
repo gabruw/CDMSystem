@@ -12,6 +12,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPreRequisito { get; set; }
 
         public string DescricaoPreRequisito { get; set; }

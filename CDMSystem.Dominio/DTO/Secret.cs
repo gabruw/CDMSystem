@@ -12,6 +12,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdSecret { get; set; }
 
         public virtual ICollection<OminiSkill> OminiSkillSecret { get; set; }

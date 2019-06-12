@@ -267,7 +267,8 @@ namespace CDMSystem.Repositorio.Migrations
 
             modelBuilder.Entity("CDMSystem.Dominio.DTO.OminiSkill", b =>
                 {
-                    b.Property<int>("IdOminiSkill");
+                    b.Property<int>("IdOminiSkill")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("AreaOminiSkill")
                         .IsRequired()

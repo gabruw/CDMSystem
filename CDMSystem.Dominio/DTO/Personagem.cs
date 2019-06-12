@@ -12,6 +12,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPersonagem { get; set; }
 
         public int IdRacaPersonagem { get; set; }

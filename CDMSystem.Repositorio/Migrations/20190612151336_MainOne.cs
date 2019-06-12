@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CDMSystem.Repositorio.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class MainOne : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -167,7 +167,8 @@ namespace CDMSystem.Repositorio.Migrations
                 name: "OminiSkill",
                 columns: table => new
                 {
-                    IdOminiSkill = table.Column<int>(nullable: false),
+                    IdOminiSkill = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdClasseOminiSkill = table.Column<int>(nullable: false),
                     IdSecretOminiSkill = table.Column<int>(nullable: false),
                     IdItemOminiSkill = table.Column<int>(nullable: false),

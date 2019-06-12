@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CDMSystem.Repositorio.Migrations
 {
     [DbContext(typeof(CDMSystemContext))]
-    [Migration("20190611225855_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20190612151336_MainOne")]
+    partial class MainOne
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -269,7 +269,8 @@ namespace CDMSystem.Repositorio.Migrations
 
             modelBuilder.Entity("CDMSystem.Dominio.DTO.OminiSkill", b =>
                 {
-                    b.Property<int>("IdOminiSkill");
+                    b.Property<int>("IdOminiSkill")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("AreaOminiSkill")
                         .IsRequired()

@@ -13,6 +13,7 @@ namespace CDMSystem.Dominio.DTO
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdOminiSkill { get; set; }
 
         public int IdClasseOminiSkill { get; set; }
