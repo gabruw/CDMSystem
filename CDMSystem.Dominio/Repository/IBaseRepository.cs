@@ -7,12 +7,12 @@ namespace CDMSystem.Dominio.Contratos
     {
         void Incluid(TEntity entity);
 
-        TEntity GetbyId(int id);
+        void Update(TEntity entity);
+
+        void Remove(TEntity entity);
 
         IEnumerable<TEntity> GetAll();
 
-        void Reflesh(TEntity entity);
-
-        void Remove(TEntity entity);
+        TEntity GetbyId(int Id);
     }
 }

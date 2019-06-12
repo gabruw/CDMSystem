@@ -1,43 +1,50 @@
-﻿using System;
+﻿using CDMSystem.Repositorio.Context;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CDMSystem.Dominio.Contratos
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        public BaseRepository()
-        {
+        protected readonly CDMSystemContext CDMSystemContext;
 
-        }
-
-        public void Dispose()
+        public BaseRepository(CDMSystemContext cdmSystemContext)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TEntity> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity GetbyId(int id)
-        {
-            throw new NotImplementedException();
+            CDMSystemContext = cdmSystemContext;
         }
 
         public void Incluid(TEntity entity)
         {
-            throw new NotImplementedException();
+            CDMSystemContext.Set<TEntity>().Add(entity);
+            CDMSystemContext.SaveChanges();
         }
 
-        public void Reflesh(TEntity entity)
+        public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            CDMSystemContext.Set<TEntity>().Update(entity);
+            CDMSystemContext.SaveChanges();
         }
 
         public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            CDMSystemContext.Remove(entity);
+            CDMSystemContext.SaveChanges();
+        }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return CDMSystemContext.Set<TEntity>().ToList();
+        }
+
+        public TEntity GetbyId(int Id)
+        {
+            return CDMSystemContext.Set<TEntity>().Find(Id);
+        }
+
+        public void Dispose()
+        {
+            CDMSystemContext.Dispose();
         }
     }
 }
