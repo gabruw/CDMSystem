@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _secretRepository.Incluid(newSecret);
 
-                return Created("api/secret", newSecret);
+                return Created("api/Secret", newSecret);
             }
             catch (Exception ex)
             {

@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _classeRepository.Incluid(newClasse);
 
-                return Created("api/classe", newClasse);
+                return Created("api/Classe", newClasse);
             }
             catch (Exception ex)
             {

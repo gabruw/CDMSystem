@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _guildRepository.Incluid(newGuild);
 
-                return Created("api/guild", newGuild);
+                return Created("api/Guild", newGuild);
             }
             catch (Exception ex)
             {

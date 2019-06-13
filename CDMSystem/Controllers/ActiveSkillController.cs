@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _activeSkillRepository.Incluid(newActiveSkill);
 
-                return Created("api/activeSkill", newActiveSkill);
+                return Created("api/ActiveSkill", newActiveSkill);
             }
             catch (Exception ex)
             {

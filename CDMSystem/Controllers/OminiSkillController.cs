@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _ominiSkillRepository.Incluid(newOminiSkill);
 
-                return Created("api/ominiSkill", newOminiSkill);
+                return Created("api/OminiSkill", newOminiSkill);
             }
             catch (Exception ex)
             {

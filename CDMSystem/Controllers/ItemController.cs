@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _itemRepository.Incluid(newItem);
 
-                return Created("api/item", newItem);
+                return Created("api/Item", newItem);
             }
             catch (Exception ex)
             {

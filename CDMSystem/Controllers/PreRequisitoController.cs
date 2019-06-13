@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _preRequisitoRepository.Incluid(newPreRequisito);
 
-                return Created("api/preRequisito", newPreRequisito);
+                return Created("api/PreRequisito", newPreRequisito);
             }
             catch (Exception ex)
             {

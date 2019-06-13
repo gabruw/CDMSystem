@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _personagemRepository.Incluid(newPersonagem);
 
-                return Created("api/personagem", newPersonagem);
+                return Created("api/Personagem", newPersonagem);
             }
             catch (Exception ex)
             {

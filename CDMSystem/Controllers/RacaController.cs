@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _racaRepository.Incluid(newRaca);
 
-                return Created("api/raca", newRaca);
+                return Created("api/Raca", newRaca);
             }
             catch (Exception ex)
             {

@@ -46,7 +46,7 @@ namespace CDMSystem.Controllers
             {
                 _cubeRepository.Incluid(newCube);
 
-                return Created("api/cube", newCube);
+                return Created("api/Cube", newCube);
             }
             catch (Exception ex)
             {
