@@ -9,6 +9,7 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(p => p.IdPersonagem);
 
+            builder.HasOne(p => p.UsuarioPersonagem).WithMany().HasForeignKey(p => p.IdUsuarioPersonagem);
             builder.HasOne(p => p.ClassePersonagem).WithMany().HasForeignKey(p => p.IdClassePersonagem);
             builder.HasOne(p => p.RacaPersonagem).WithMany().HasForeignKey(p => p.IdRacaPersonagem);
             builder.HasOne(p => p.ActiveSkillPersonagem).WithMany().HasForeignKey(p => p.IdActiveSkillPersonagem);

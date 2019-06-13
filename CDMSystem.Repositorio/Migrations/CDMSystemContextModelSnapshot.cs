@@ -302,6 +302,8 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("IdSecretOminiSkill");
 
+                    b.Property<int?>("ItemIdItem");
+
                     b.Property<int>("LevelOminiSkill")
                         .HasColumnType("int")
                         .HasMaxLength(3);
@@ -329,7 +331,11 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.HasIndex("IdClasseOminiSkill");
 
+                    b.HasIndex("IdItemOminiSkill");
+
                     b.HasIndex("IdSecretOminiSkill");
+
+                    b.HasIndex("ItemIdItem");
 
                     b.HasIndex("SecretIdSecret");
 
@@ -383,6 +389,8 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("IdSecretPersonagem");
 
+                    b.Property<int>("IdUsuarioPersonagem");
+
                     b.Property<string>("ImagemPersonagem")
                         .HasColumnType("varchar(64)")
                         .HasMaxLength(64);
@@ -428,6 +436,8 @@ namespace CDMSystem.Repositorio.Migrations
                     b.HasIndex("IdRacaPersonagem");
 
                     b.HasIndex("IdSecretPersonagem");
+
+                    b.HasIndex("IdUsuarioPersonagem");
 
                     b.ToTable("Personagem");
                 });
@@ -525,6 +535,44 @@ namespace CDMSystem.Repositorio.Migrations
                     b.ToTable("Secret");
                 });
 
+            modelBuilder.Entity("CDMSystem.Dominio.DTO.Usuario", b =>
+                {
+                    b.Property<int>("IdUsuario")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CpfUsuario")
+                        .HasColumnType("int(11)")
+                        .HasMaxLength(11);
+
+                    b.Property<string>("EmailUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(120)")
+                        .HasMaxLength(120);
+
+                    b.Property<string>("NomeUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<int>("PermissaoUsuario")
+                        .HasColumnType("int(1)")
+                        .HasMaxLength(1);
+
+                    b.Property<string>("SenhaUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("SobrenomeUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("Usuario");
+                });
+
             modelBuilder.Entity("CDMSystem.Dominio.DTO.Classe", b =>
                 {
                     b.HasOne("CDMSystem.Dominio.DTO.Guild", "GuildClasse")
@@ -557,14 +605,18 @@ namespace CDMSystem.Repositorio.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CDMSystem.Dominio.DTO.Item", "ItemOminiSkill")
-                        .WithMany("OminiSkillItem")
-                        .HasForeignKey("IdOminiSkill")
+                        .WithMany()
+                        .HasForeignKey("IdItemOminiSkill")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CDMSystem.Dominio.DTO.Secret", "SecretOminiSkill")
                         .WithMany()
                         .HasForeignKey("IdSecretOminiSkill")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CDMSystem.Dominio.DTO.Item")
+                        .WithMany("OminiSkillItem")
+                        .HasForeignKey("ItemIdItem");
 
                     b.HasOne("CDMSystem.Dominio.DTO.Secret")
                         .WithMany("OminiSkillSecret")
@@ -596,6 +648,11 @@ namespace CDMSystem.Repositorio.Migrations
                     b.HasOne("CDMSystem.Dominio.DTO.Secret", "SecretPersonagem")
                         .WithMany()
                         .HasForeignKey("IdSecretPersonagem")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CDMSystem.Dominio.DTO.Usuario", "UsuarioPersonagem")
+                        .WithMany()
+                        .HasForeignKey("IdUsuarioPersonagem")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

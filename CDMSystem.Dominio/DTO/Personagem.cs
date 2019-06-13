@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
@@ -14,6 +13,11 @@ namespace CDMSystem.Dominio.DTO
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPersonagem { get; set; }
+
+        public int IdUsuarioPersonagem { get; set; }
+
+        [ForeignKey("IdUsuarioPersonagem")]
+        public virtual Usuario UsuarioPersonagem { get; set; }
 
         public int IdRacaPersonagem { get; set; }
 
