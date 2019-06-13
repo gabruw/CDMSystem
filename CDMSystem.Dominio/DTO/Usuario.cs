@@ -22,7 +22,7 @@ namespace CDMSystem.Dominio.DTO
 
         public string SobrenomeUsuario { get; set; }
 
-        public int CpfUsuario { get; set; }
+        public long CpfUsuario { get; set; }
 
         public int PermissaoUsuario { get; set; }
 

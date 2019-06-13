@@ -540,8 +540,8 @@ namespace CDMSystem.Repositorio.Migrations
                     b.Property<int>("IdUsuario")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CpfUsuario")
-                        .HasColumnType("int(11)")
+                    b.Property<long>("CpfUsuario")
+                        .HasColumnType("numeric(11)")
                         .HasMaxLength(11);
 
                     b.Property<string>("EmailUsuario")

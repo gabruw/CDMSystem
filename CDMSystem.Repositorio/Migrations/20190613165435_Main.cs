@@ -93,7 +93,7 @@ namespace CDMSystem.Repositorio.Migrations
                     SenhaUsuario = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     NomeUsuario = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false),
                     SobrenomeUsuario = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    CpfUsuario = table.Column<int>(type: "int(11)", maxLength: 11, nullable: false),
+                    CpfUsuario = table.Column<long>(type: "numeric(11)", maxLength: 11, nullable: false),
                     PermissaoUsuario = table.Column<int>(type: "int(1)", maxLength: 1, nullable: false)
                 },
                 constraints: table =>

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CDMSystem.Repositorio.Migrations
 {
     [DbContext(typeof(CDMSystemContext))]
-    [Migration("20190613112834_Main")]
+    [Migration("20190613165435_Main")]
     partial class Main
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -542,8 +542,8 @@ namespace CDMSystem.Repositorio.Migrations
                     b.Property<int>("IdUsuario")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CpfUsuario")
-                        .HasColumnType("int(11)")
+                    b.Property<long>("CpfUsuario")
+                        .HasColumnType("numeric(11)")
                         .HasMaxLength(11);
 
                     b.Property<string>("EmailUsuario")
