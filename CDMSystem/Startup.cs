@@ -40,8 +40,8 @@ namespace CDMSystem
 
             // DB Connection
             var connectionString = Configuration.GetConnectionString("db_CDMSystem");
-            services.AddDbContext<CDMSystemContext>(option => 
-                                                            option.UseLazyLoadingProxies().UseMySql(connectionString, 
+            services.AddDbContext<CDMSystemContext>(option =>
+                                                            option.UseLazyLoadingProxies().UseMySql(connectionString,
                                                                 m => m.MigrationsAssembly("CDMSystem.Repositorio")));
 
             // Scope's
@@ -78,7 +78,9 @@ namespace CDMSystem
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" }
+                );
             });
         }
     }

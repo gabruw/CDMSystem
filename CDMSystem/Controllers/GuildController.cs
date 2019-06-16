@@ -1,57 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using CDMSystem.Dominio.Repository;
+using Microsoft.AspNetCore.Mvc;
+using CDMSystem.Models;
 
 namespace CDMSystem.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("[controller]")]
     public class GuildController : Controller
     {
-        private readonly IGuildRepository _guildRepository;
-
-        public GuildController(IGuildRepository guildRepository)
+        [Route("[action]")]
+        public IActionResult GuildCadastro()
         {
-            _guildRepository = guildRepository;
+            return View("~/Views/Cadastro/GuildCadastro.cshtml");
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
         {
-            try
-            {
-                var resp = true;
-
-                if (resp == true)
-                {
-                    return Ok("");
-                }
-                else
-                {
-                    return BadRequest("");
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        [HttpPost]
-        public IActionResult Post([FromBody] Dominio.DTO.Guild newGuild)
-        {
-            try
-            {
-                _guildRepository.Incluid(newGuild);
-
-                return Created("api/Guild", newGuild);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

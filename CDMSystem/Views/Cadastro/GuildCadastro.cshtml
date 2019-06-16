@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Guild - Cadastro";
+    Layout = "~/Views/Shared/_Cadastro.cshtml";
+}
+
+<form id="CadastroGuild" method="post">
+    <div>
+        @* Cadastro da Guild *@
+        <label>Nome da Guild:</label>
+        <input type="text" id="NomeGuild" />
+
+        <br>
+
+        <label>Descrição da Guild:</label>
+        <textarea id="DescricaoGuild"></textarea>
+
+        <br>
+
+        <button type="submit" id="ConfirmarCadastroGuild" class="btn btn-dark">Cadastrar</button>
+    </div>
+</form>
