@@ -56,8 +56,7 @@ namespace CDMSystem.Repositorio.Migrations
                     IdRaca = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NomeRaca = table.Column<string>(type: "varchar(40)", maxLength: 40, nullable: false),
-                    BonusRaca = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false),
-                    RaceSkillRaca = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false)
+                    BonusRaca = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,10 +118,10 @@ namespace CDMSystem.Repositorio.Migrations
                     DmgfItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DmgmItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DefItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    FurItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    DetItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    CritItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    AcrItem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
+                    FurItem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    DetItem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    CritItem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    AcrItem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
                     CubeIdCube = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -161,10 +160,10 @@ namespace CDMSystem.Repositorio.Migrations
                     DmgfClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DmgmClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DefClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    FurClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    DetClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    CritClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    AcrClasse = table.Column<int>(type: "int", maxLength: 4, nullable: false),
+                    FurClasse = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    DetClasse = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    CritClasse = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    AcrClasse = table.Column<int>(type: "int", maxLength: 3, nullable: false),
                     PericiaLaminasClasse = table.Column<string>(type: "varchar(1)", maxLength: 1, nullable: false),
                     PericiaLongaDistanciaClasse = table.Column<string>(type: "varchar(1)", maxLength: 1, nullable: false),
                     PericiaArremecoClasse = table.Column<string>(type: "varchar(1)", maxLength: 1, nullable: false),
@@ -182,6 +181,34 @@ namespace CDMSystem.Repositorio.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RaceSkill",
+                columns: table => new
+                {
+                    IdRaceSkill = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    IdRaca = table.Column<int>(nullable: false),
+                    NomeRaceSkill = table.Column<string>(type: "varchar(120)", maxLength: 120, nullable: false),
+                    TipoRaceSkill = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
+                    ElementoRaceSkill = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    DescricaoRaceSkill = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
+                    EfeitoRaceSkill = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false),
+                    CustoRaceSkill = table.Column<string>(type: "varchar(5)", maxLength: 5, nullable: false),
+                    AreaRaceSkill = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false),
+                    LevelRaceSkill = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    UsoRaceSkill = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RaceSkill", x => x.IdRaceSkill);
+                    table.ForeignKey(
+                        name: "FK_RaceSkill_Raca_IdRaceSkill",
+                        column: x => x.IdRaceSkill,
+                        principalTable: "Raca",
+                        principalColumn: "IdRaca",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OminiSkill",
                 columns: table => new
                 {
@@ -192,7 +219,7 @@ namespace CDMSystem.Repositorio.Migrations
                     IdItemOminiSkill = table.Column<int>(nullable: false),
                     NomeOminiSkill = table.Column<string>(type: "varchar(120)", maxLength: 120, nullable: false),
                     TipoOminiSkill = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
-                    ElementoOminiSkill = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
+                    ElementoOminiSkill = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     DescricaoOminiSkill = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
                     EfeitoOminiSkill = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false),
                     CustoOminiSkill = table.Column<string>(type: "varchar(5)", maxLength: 5, nullable: false),
@@ -268,10 +295,10 @@ namespace CDMSystem.Repositorio.Migrations
                     DmgfPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DmgmPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
                     DefPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    FurPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    DetPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    CritPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false),
-                    AcrPersonagem = table.Column<int>(type: "int", maxLength: 4, nullable: false)
+                    FurPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    DetPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    CritPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    AcrPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -322,6 +349,7 @@ namespace CDMSystem.Repositorio.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DescricaoPreRequisito = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
                     IdOminiSkillPreRequisito = table.Column<int>(nullable: false),
+                    IdRaceSkillPreRequisito = table.Column<int>(nullable: false),
                     OminiSkillIdOminiSkill = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -332,6 +360,12 @@ namespace CDMSystem.Repositorio.Migrations
                         column: x => x.IdOminiSkillPreRequisito,
                         principalTable: "OminiSkill",
                         principalColumn: "IdOminiSkill",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PreRequisito_RaceSkill_IdPreRequisito",
+                        column: x => x.IdPreRequisito,
+                        principalTable: "RaceSkill",
+                        principalColumn: "IdRaceSkill",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PreRequisito_OminiSkill_OminiSkillIdOminiSkill",
@@ -439,13 +473,13 @@ namespace CDMSystem.Repositorio.Migrations
                 name: "ActiveSkill");
 
             migrationBuilder.DropTable(
-                name: "Raca");
-
-            migrationBuilder.DropTable(
                 name: "Usuario");
 
             migrationBuilder.DropTable(
                 name: "OminiSkill");
+
+            migrationBuilder.DropTable(
+                name: "RaceSkill");
 
             migrationBuilder.DropTable(
                 name: "Classe");
@@ -455,6 +489,9 @@ namespace CDMSystem.Repositorio.Migrations
 
             migrationBuilder.DropTable(
                 name: "Secret");
+
+            migrationBuilder.DropTable(
+                name: "Raca");
 
             migrationBuilder.DropTable(
                 name: "Guild");

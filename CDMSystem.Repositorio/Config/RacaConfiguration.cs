@@ -11,7 +11,8 @@ namespace CDMSystem.Repositorio.Config
 
             builder.Property(r => r.NomeRaca).IsRequired().HasMaxLength(40).HasColumnType("varchar(40)");
             builder.Property(r => r.BonusRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
-            builder.Property(r => r.RaceSkillRaca).IsRequired().HasMaxLength(300).HasColumnType("varchar(300)");
+
+            builder.HasMany(r => r.RaceSkillRaca).WithOne(rs => rs.RacaRaceSkill).HasForeignKey(rs => rs.IdRaceSkill);
         }
     }
 }

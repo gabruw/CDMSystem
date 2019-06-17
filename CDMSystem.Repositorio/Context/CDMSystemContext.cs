@@ -22,6 +22,7 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.Ignore<Classe>();
             modelBuilder.Ignore<Usuario>();
             modelBuilder.Ignore<Personagem>();
+            modelBuilder.Ignore<RaceSkill>();
             modelBuilder.Ignore<OminiSkill>();
             modelBuilder.Ignore<ActiveSkill>();
             modelBuilder.Ignore<PreRequisito>();
@@ -33,6 +34,7 @@ namespace CDMSystem.Repositorio.Context
             modelBuilder.ApplyConfiguration(new SecretConfiguration());
             modelBuilder.ApplyConfiguration(new ClasseConfiguration());
             modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            modelBuilder.ApplyConfiguration(new RaceSkillConfiguration());
             modelBuilder.ApplyConfiguration(new OminiSkillConfiguration());
             modelBuilder.ApplyConfiguration(new PersonagemConfiguration());
             modelBuilder.ApplyConfiguration(new ActiveSkillConfiguration());
@@ -56,6 +58,8 @@ namespace CDMSystem.Repositorio.Context
         public DbSet<Usuario> Usuario { get; set; }
 
         public DbSet<Personagem> Personagems { get; set; }
+
+        public DbSet<RaceSkill> RaceSkill { get; set; }
 
         public DbSet<OminiSkill> OminiSkill { get; set; }
 

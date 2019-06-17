@@ -21,6 +21,11 @@ namespace CDMSystem.Dominio.DTO
         [ForeignKey("IdOminiSkillPreRequisito")]
         public virtual OminiSkill OminiSkillPreRequisito { get; set; }
 
+        public int IdRaceSkillPreRequisito { get; set; }
+
+        [ForeignKey("IdRaceSkillPreRequisito")]
+        public virtual RaceSkill RaceSkillPreRequisito { get; set; }
+
         public override void Validate()
         {
             ClearValidateMensages();

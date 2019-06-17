@@ -17,22 +17,22 @@ namespace CDMSystem.Repositorio.Config
             builder.HasOne(p => p.CubePersonagem).WithMany().HasForeignKey(p => p.IdCubePersonagem);
 
             builder.Property(p => p.NomePersonagem).IsRequired().HasMaxLength(120).HasColumnType("varchar(120)");
-            builder.Property(p => p.OrdemPersonagem).IsRequired().HasMaxLength(30).HasColumnType("varchar(30)");
             builder.Property(p => p.LevelPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
+            builder.Property(p => p.ImagemPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
+            builder.Property(p => p.MarkPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
             builder.Property(p => p.OspPersonagem).HasMaxLength(3).HasColumnType("int");
             builder.Property(p => p.SpPersonagem).HasMaxLength(3).HasColumnType("int");
-            builder.Property(p => p.MarkPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
-            builder.Property(p => p.ImagemPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
+            builder.Property(p => p.OrdemPersonagem).IsRequired().HasMaxLength(30).HasColumnType("varchar(30)");
 
             builder.Property(p => p.HpPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.MpPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.DmgfPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.DmgmPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
             builder.Property(p => p.DefPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
-            builder.Property(p => p.FurPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
-            builder.Property(p => p.DetPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
-            builder.Property(p => p.CritPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
-            builder.Property(p => p.AcrPersonagem).IsRequired().HasMaxLength(4).HasColumnType("int");
+            builder.Property(p => p.FurPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
+            builder.Property(p => p.DetPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
+            builder.Property(p => p.CritPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
+            builder.Property(p => p.AcrPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
         }
     }
 }

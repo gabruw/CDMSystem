@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CDMSystem.Repositorio.Migrations
 {
     [DbContext(typeof(CDMSystemContext))]
-    [Migration("20190613165435_Main")]
+    [Migration("20190617135347_Main")]
     partial class Main
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("AcrClasse")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<string>("ArmaPrimariaClasse")
                         .IsRequired()
@@ -65,7 +65,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("CritClasse")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("DefClasse")
                         .HasColumnType("int")
@@ -73,7 +73,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("DetClasse")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("DmgfClasse")
                         .HasColumnType("int")
@@ -85,7 +85,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("FurClasse")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<string>("HabilidadePassivaClasse")
                         .IsRequired()
@@ -190,11 +190,11 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("AcrItem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("CritItem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int?>("CubeIdCube");
 
@@ -209,7 +209,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("DetItem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("DmgfItem")
                         .HasColumnType("int")
@@ -221,7 +221,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("FurItem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("HpItem")
                         .HasColumnType("int")
@@ -295,6 +295,7 @@ namespace CDMSystem.Repositorio.Migrations
                         .HasMaxLength(300);
 
                     b.Property<string>("ElementoOminiSkill")
+                        .IsRequired()
                         .HasColumnType("varchar(50)")
                         .HasMaxLength(50);
 
@@ -351,11 +352,11 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("AcrPersonagem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("CritPersonagem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("DefPersonagem")
                         .HasColumnType("int")
@@ -363,7 +364,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("DetPersonagem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("DmgfPersonagem")
                         .HasColumnType("int")
@@ -375,7 +376,7 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("FurPersonagem")
                         .HasColumnType("int")
-                        .HasMaxLength(4);
+                        .HasMaxLength(3);
 
                     b.Property<int>("HpPersonagem")
                         .HasColumnType("int")
@@ -456,6 +457,8 @@ namespace CDMSystem.Repositorio.Migrations
 
                     b.Property<int>("IdOminiSkillPreRequisito");
 
+                    b.Property<int>("IdRaceSkillPreRequisito");
+
                     b.Property<int?>("OminiSkillIdOminiSkill");
 
                     b.HasKey("IdPreRequisito");
@@ -482,14 +485,65 @@ namespace CDMSystem.Repositorio.Migrations
                         .HasColumnType("varchar(40)")
                         .HasMaxLength(40);
 
-                    b.Property<string>("RaceSkillRaca")
+                    b.HasKey("IdRaca");
+
+                    b.ToTable("Raca");
+                });
+
+            modelBuilder.Entity("CDMSystem.Dominio.DTO.RaceSkill", b =>
+                {
+                    b.Property<int>("IdRaceSkill")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AreaRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)")
+                        .HasMaxLength(15);
+
+                    b.Property<string>("CustoRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<string>("DescricaoRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("EfeitoRaceSkill")
                         .IsRequired()
                         .HasColumnType("varchar(300)")
                         .HasMaxLength(300);
 
-                    b.HasKey("IdRaca");
+                    b.Property<string>("ElementoRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50);
 
-                    b.ToTable("Raca");
+                    b.Property<int>("IdRaca");
+
+                    b.Property<int>("LevelRaceSkill")
+                        .HasColumnType("int")
+                        .HasMaxLength(3);
+
+                    b.Property<string>("NomeRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(120)")
+                        .HasMaxLength(120);
+
+                    b.Property<string>("TipoRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("UsoRaceSkill")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)")
+                        .HasMaxLength(15);
+
+                    b.HasKey("IdRaceSkill");
+
+                    b.ToTable("RaceSkill");
                 });
 
             modelBuilder.Entity("CDMSystem.Dominio.DTO.Secret", b =>
@@ -665,9 +719,22 @@ namespace CDMSystem.Repositorio.Migrations
                         .HasForeignKey("IdOminiSkillPreRequisito")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("CDMSystem.Dominio.DTO.RaceSkill", "RaceSkillPreRequisito")
+                        .WithMany("PreRequisitoRaceSkill")
+                        .HasForeignKey("IdPreRequisito")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("CDMSystem.Dominio.DTO.OminiSkill")
                         .WithMany("PreRequisitoOminiSkill")
                         .HasForeignKey("OminiSkillIdOminiSkill");
+                });
+
+            modelBuilder.Entity("CDMSystem.Dominio.DTO.RaceSkill", b =>
+                {
+                    b.HasOne("CDMSystem.Dominio.DTO.Raca", "RacaRaceSkill")
+                        .WithMany("RaceSkillRaca")
+                        .HasForeignKey("IdRaceSkill")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

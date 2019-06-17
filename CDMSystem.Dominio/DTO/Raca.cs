@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
@@ -18,7 +19,7 @@ namespace CDMSystem.Dominio.DTO
 
         public string BonusRaca { get; set; }
 
-        public string RaceSkillRaca { get; set; }
+        public virtual ICollection<RaceSkill> RaceSkillRaca { get; set; }
 
         public override void Validate()
         {
@@ -34,7 +35,7 @@ namespace CDMSystem.Dominio.DTO
                 AddError("O campo Bônus da Raça não foi informado.");
             }
 
-            if (string.IsNullOrEmpty(RaceSkillRaca))
+            if (RaceSkillRaca.Count < 1)
             {
                 AddError("O campo Race Skill da Raça não foi informado.");
             }
