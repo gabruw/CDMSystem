@@ -39,7 +39,12 @@ namespace CDMSystem
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // DB Connection
-            var connectionString = Configuration.GetConnectionString("db_CDMSystem");
+            //var connectionString = Configuration.GetConnectionString("db_CDMSystem");
+            //services.AddDbContext<CDMSystemContext>(option =>
+            //                                                option.UseLazyLoadingProxies().UseMySql(connectionString,
+            //                                                    m => m.MigrationsAssembly("CDMSystem.Repositorio")));
+
+            var connectionString = Configuration.GetConnectionString("CDMSystemDB");
             services.AddDbContext<CDMSystemContext>(option =>
                                                             option.UseLazyLoadingProxies().UseMySql(connectionString,
                                                                 m => m.MigrationsAssembly("CDMSystem.Repositorio")));
@@ -54,6 +59,7 @@ namespace CDMSystem
             services.AddScoped<Dominio.Repository.IPersonagemRepository, Repositorio.PersonagemRepository>();
             services.AddScoped<Dominio.Repository.IPreRequisitoRepository, Repositorio.PreRequisitoRepository>();
             services.AddScoped<Dominio.Repository.IRacaRepository, Repositorio.RacaRepository>();
+            services.AddScoped<Dominio.Repository.IRaceSkillRepository, Repositorio.RaceSkillRepository>();
             services.AddScoped<Dominio.Repository.ISecretRepository, Repositorio.SecretRepository>();
         }
 
