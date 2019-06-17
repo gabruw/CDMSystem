@@ -54,6 +54,11 @@ namespace CDMSystem.Models
         [Required(ErrorMessage = "Necessário adicionar um Level ao Personagem.")]
         public int LevelPersonagem { get; set; }
 
+        [MinLength(1)]
+        [MaxLength(5)]
+        [Required(ErrorMessage = "Necessário adicionar uma quantidade de Experiência ao Personagem.")]
+        public int ExpPersonagem { get; set; }
+
         [MinLength(64)]
         [MaxLength(64)]
         public string ImagemPersonagem { get; set; }

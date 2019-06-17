@@ -285,6 +285,7 @@ namespace CDMSystem.Repositorio.Migrations
                     IdCubePersonagem = table.Column<int>(nullable: false),
                     NomePersonagem = table.Column<string>(type: "varchar(120)", maxLength: 120, nullable: false),
                     LevelPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    ExpPersonagem = table.Column<int>(type: "int", maxLength: 5, nullable: false),
                     ImagemPersonagem = table.Column<string>(type: "varchar(64)", maxLength: 64, nullable: true),
                     MarkPersonagem = table.Column<string>(type: "varchar(64)", maxLength: 64, nullable: true),
                     OspPersonagem = table.Column<int>(type: "int", maxLength: 3, nullable: false),

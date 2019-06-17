@@ -3,16 +3,23 @@
     ViewData["Layout"] = "_Layout";
 }
 
+@model Personagem
+
 <form>
     <div>
         @* Personagem *@
         <label>Nome</label>
-        <input type="text" id="Nome" />
+        <input type="text" asp-for="NomePersonagem" id="Nome" />
 
         <br>
 
         <label>Level</label>
-        <input type="text" id="Level" />
+        <input type="text" asp-for="LevelPersonagem" id="Level" />
+
+        <br>
+
+        <label>Experiência</label>
+        <input type="text" asp-for="ExpPersonagem" id="Exp" />
 
         <br>
 

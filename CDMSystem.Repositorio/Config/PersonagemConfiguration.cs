@@ -18,6 +18,7 @@ namespace CDMSystem.Repositorio.Config
 
             builder.Property(p => p.NomePersonagem).IsRequired().HasMaxLength(120).HasColumnType("varchar(120)");
             builder.Property(p => p.LevelPersonagem).IsRequired().HasMaxLength(3).HasColumnType("int");
+            builder.Property(p => p.ExpPersonagem).IsRequired().HasMaxLength(5).HasColumnType("int");
             builder.Property(p => p.ImagemPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
             builder.Property(p => p.MarkPersonagem).HasMaxLength(64).HasColumnType("varchar(64)");
             builder.Property(p => p.OspPersonagem).HasMaxLength(3).HasColumnType("int");

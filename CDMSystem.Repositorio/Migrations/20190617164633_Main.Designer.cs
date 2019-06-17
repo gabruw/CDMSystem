@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CDMSystem.Repositorio.Migrations
 {
     [DbContext(typeof(CDMSystemContext))]
-    [Migration("20190617135347_Main")]
+    [Migration("20190617164633_Main")]
     partial class Main
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -373,6 +373,10 @@ namespace CDMSystem.Repositorio.Migrations
                     b.Property<int>("DmgmPersonagem")
                         .HasColumnType("int")
                         .HasMaxLength(4);
+
+                    b.Property<int>("ExpPersonagem")
+                        .HasColumnType("int")
+                        .HasMaxLength(5);
 
                     b.Property<int>("FurPersonagem")
                         .HasColumnType("int")

@@ -48,6 +48,8 @@ namespace CDMSystem.Dominio.DTO
 
         public int LevelPersonagem { get; set; }
 
+        public int ExpPersonagem { get; set; }
+
         public string ImagemPersonagem { get; set; }
 
         public string MarkPersonagem { get; set; }

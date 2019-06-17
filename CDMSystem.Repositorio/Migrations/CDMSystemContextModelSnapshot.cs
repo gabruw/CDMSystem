@@ -372,6 +372,10 @@ namespace CDMSystem.Repositorio.Migrations
                         .HasColumnType("int")
                         .HasMaxLength(4);
 
+                    b.Property<int>("ExpPersonagem")
+                        .HasColumnType("int")
+                        .HasMaxLength(5);
+
                     b.Property<int>("FurPersonagem")
                         .HasColumnType("int")
                         .HasMaxLength(3);
