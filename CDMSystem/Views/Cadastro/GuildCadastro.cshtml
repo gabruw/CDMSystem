@@ -3,16 +3,18 @@
     Layout = "~/Views/Shared/_Cadastro.cshtml";
 }
 
-<form id="CadastroGuild" method="post">
+@model Guild
+
+<form asp-action="Create" asp-controller="Guild" id="CadastroGuild" method="post">
     <div>
         @* Cadastro da Guild *@
         <label>Nome da Guild:</label>
-        <input type="text" id="NomeGuild" />
+        <input type="text" asp-for="NomeGuild" class="form-control" id="NomeGuild" />
 
         <br>
 
         <label>Descrição da Guild:</label>
-        <textarea id="DescricaoGuild"></textarea>
+        <textarea asp-for="DescricaoGuild" class="form-control" id="DescricaoGuild"></textarea>
 
         <br>
 

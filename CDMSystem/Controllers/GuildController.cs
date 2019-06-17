@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CDMSystem.Dominio.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CDMSystem.Controllers
 {
+    //[Route("[Controller]")]
     public class GuildController : Controller
     {
+        private readonly IGuildRepository _guildRepository;
+
+        public GuildController(IGuildRepository guildRepository)
+        {
+            _guildRepository = guildRepository;
+        }
+
         // GET: Guild
         public ActionResult Index()
         {
-            return View("~/Views/Principal/Guild.cshtml");
+            var guildsDTO = _guildRepository.GetAll();
+
+            return View("~/Views/Principal/Guild.cshtml", guildsDTO);
         }
 
         // GET: Guild/Details/5
@@ -30,34 +41,49 @@ namespace CDMSystem.Controllers
         // POST: Guild/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Models.Guild _guild)
         {
             try
             {
-                // TODO: Add insert logic here
+                Dominio.DTO.Guild guildDTO = new Dominio.DTO.Guild();
+                guildDTO.NomeGuild = _guild.NomeGuild;
+                guildDTO.DescricaoGuild = _guild.DescricaoGuild;
+
+                _guildRepository.Incluid(guildDTO);
+
+                Created("Guild/Create", guildDTO);
 
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View("~/Views/Cadastro/GuildCadastro.cshtml");
+                return View();
             }
         }
 
         // GET: Guild/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var guildDTO = _guildRepository.GetbyId(id);
+
+            return View("~/Views/Edicao/GuildEdicao.cshtml", guildDTO);
         }
 
         // POST: Guild/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Models.Guild _guild)
         {
             try
             {
-                // TODO: Add update logic here
+                Dominio.DTO.Guild guildDTO = new Dominio.DTO.Guild();
+                guildDTO.IdGuild = id;
+                guildDTO.NomeGuild = _guild.NomeGuild;
+                guildDTO.DescricaoGuild = _guild.DescricaoGuild;
+
+                _guildRepository.Update(guildDTO);
+
+                Created("Guild/Edit", guildDTO);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -70,24 +96,11 @@ namespace CDMSystem.Controllers
         // GET: Guild/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
-        }
+            Dominio.DTO.Guild guildDTO = new Dominio.DTO.Guild();
+            guildDTO.IdGuild = id;
+            _guildRepository.Remove(guildDTO);
 
-        // POST: Guild/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }

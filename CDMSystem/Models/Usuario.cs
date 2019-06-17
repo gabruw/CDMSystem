@@ -11,8 +11,6 @@ namespace CDMSystem.Models
         }
 
         [Key]
-        [MinLength(11)]
-        [MaxLength(11)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdUsuario { get; set; }
 

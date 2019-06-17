@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Guild - Edição";
+    Layout = "~/Views/Shared/_Cadastro.cshtml";
+}
+
+@model CDMSystem.Dominio.DTO.Guild
+
+<form asp-action="Edit" asp-controller="Guild" id="EdicaoGuild" method="post">
+    <div>
+        @* Edição da Guild *@
+        <label>Nome da Guild:</label>
+        <input type="text" asp-for="NomeGuild" class="form-control" id="NomeGuild" value="@Model.NomeGuild" />
+
+        <br>
+
+        <label>Descrição da Guild:</label>
+        <textarea asp-for="DescricaoGuild" class="form-control" id="DescricaoGuild" value="@Model.DescricaoGuild"></textarea>
+
+        <br>
+
+        <button type="submit" asp-controller="Guild" asp-action="Edit" asp-route-id="@Model.IdGuild" id="ConfirmarEdicaoGuild" class="btn btn-dark">Confirmar Edição</button>
+    </div>
+</form>

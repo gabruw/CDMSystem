@@ -1,7 +1,18 @@
-﻿
-@{
-    ViewData["Title"] = "Guild";
+﻿@{
+    ViewData["Title"] = "Guild - Principal";
 }
+
+@model IEnumerable<CDMSystem.Dominio.DTO.Guild>
 
 <h1>Guild</h1>
 
+@foreach (var guild in Model)
+{
+    <p>@guild.NomeGuild</p>
+    <p>@guild.DescricaoGuild</p>
+
+    <br>
+
+    <a asp-controller="Guild" asp-action="Edit" asp-route-id="@guild.IdGuild" id="EdicaoGuild" class="btn btn-dark">Editar</a>
+    <a asp-controller="Guild" asp-action="Delete" asp-route-id="@guild.IdGuild" id="EdicaoGuild" class="btn btn-dark">Excluir</a>
+}
