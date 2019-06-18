@@ -9,6 +9,8 @@ namespace CDMSystem.Repositorio.Config
         {
             builder.HasKey(rs => rs.IdRaceSkill);
 
+            builder.HasOne(rs => rs.RacaRaceSkill).WithMany().HasForeignKey(rs => rs.IdRacaRaceSkill);
+
             builder.Property(rs => rs.NomeRaceSkill).IsRequired().HasMaxLength(120).HasColumnType("varchar(120)");
             builder.Property(rs => rs.TipoRaceSkill).IsRequired().HasMaxLength(10).HasColumnType("varchar(10)");
             builder.Property(rs => rs.ElementoRaceSkill).IsRequired().HasMaxLength(50).HasColumnType("varchar(50)");

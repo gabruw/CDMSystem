@@ -15,9 +15,9 @@ namespace CDMSystem.Dominio.DTO
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdRaceSkill { get; set; }
 
-        public int IdRaca { get; set; }
+        public int IdRacaRaceSkill { get; set; }
 
-        [ForeignKey("IdRaca")]
+        [ForeignKey("IdRacaRaceSkill")]
         public virtual Raca RacaRaceSkill { get; set; }
 
         public string NomeRaceSkill { get; set; }

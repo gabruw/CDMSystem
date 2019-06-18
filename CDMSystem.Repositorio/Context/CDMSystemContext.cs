@@ -43,7 +43,7 @@ namespace CDMSystem.Repositorio.Context
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Raca> Racas { get; set; }
+        public DbSet<Raca> Raca { get; set; }
 
         public DbSet<Cube> Cube { get; set; }
 
@@ -57,7 +57,7 @@ namespace CDMSystem.Repositorio.Context
 
         public DbSet<Usuario> Usuario { get; set; }
 
-        public DbSet<Personagem> Personagems { get; set; }
+        public DbSet<Personagem> Personagem { get; set; }
 
         public DbSet<RaceSkill> RaceSkill { get; set; }
 
