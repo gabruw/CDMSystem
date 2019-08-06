@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CDMSystem.Dominio.DTO
@@ -12,24 +13,29 @@ namespace CDMSystem.Dominio.DTO
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdGuild { get; set; }
+        public double Id { get; set; }
 
-        public string NomeGuild { get; set; }
+        public double IdClass { get; set; }
 
-        public string DescricaoGuild { get; set; }
+        [ForeignKey("IdClass")]
+        public virtual ICollection<Class> GuildClass { get; set; }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
 
         public override void Validate()
         {
             ClearValidateMensages();
 
-            if (string.IsNullOrEmpty(NomeGuild))
+            if (string.IsNullOrEmpty(this.Name))
             {
-                AddError("O campo Nome da Guild não foi informado.");
+                AddError("O campo Nome não foi informado.");
             }
 
-            if (string.IsNullOrEmpty(DescricaoGuild))
+            if (string.IsNullOrEmpty(this.Description))
             {
-                AddError("O campo Descrição da Guild não foi informado.");
+                AddError("O campo Descrição não foi informado.");
             }
         }
     }
